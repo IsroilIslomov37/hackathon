@@ -97,12 +97,21 @@ function picture(base, alt, { thumb = false, eager = false } = {}) {
 function thumbHtml(base, alt, kind, has = true) {
   return `<span class="thumb ph ph-${kind}" aria-hidden="${has ? 'false' : 'true'}">${icon(ImageOff, 16)}${has ? picture(base, alt, { thumb: true }) : ''}</span>`;
 }
-// Rasm yuklanmasa (404 va h.k.) uni olib tashlaymiz: orqasidagi placeholder ko'rinadi
+// Rasm yuklanmasa: avval WebP o'rniga JPG sinab ko'riladi (yangi joyga faqat .jpg qo'yish kifoya),
+// u ham bo'lmasa rasm olib tashlanadi va orqasidagi placeholder ko'rinadi.
 document.addEventListener(
   'error',
   (e) => {
     const el = e.target;
-    if (el instanceof HTMLImageElement && el.closest('.ph')) (el.closest('picture') || el).remove();
+    if (!(el instanceof HTMLImageElement)) return;
+    const pic = el.closest('picture');
+    const webp = pic && pic.querySelector('source');
+    if (webp) {
+      webp.remove();
+      el.setAttribute('src', el.getAttribute('src'));
+      return;
+    }
+    if (el.closest('.ph, .q-img')) (pic || el).remove();
   },
   true,
 );
@@ -265,9 +274,26 @@ function closeFlatMap() {
 }
 $('#back-globe').addEventListener('click', closeFlatMap);
 
+// Telefonda pastki karta ochiq bo'lsa, tanlangan joy karta ustidagi ko'rinadigan qismga chiqishi uchun
+// globus/xarita markazi ekran balandligining shu ulushiga yuqoriga suriladi.
+const mobileMq = matchMedia('(max-width: 768px)');
+const SHEET_OFFSET = 0.36;
+const sheetOpen = () => mobileMq.matches && !$('#details').hidden;
+function syncGlobeOffset() {
+  globe.setCenterOffset(sheetOpen() ? SHEET_OFFSET : 0);
+}
+mobileMq.addEventListener('change', syncGlobeOffset);
+
 function flyTo([lat, lng], dist = 2.7, ms = 1200) {
   if (state.view === 'map' && flat) {
-    flat.flyTo([lat, lng], Math.max(flat.getZoom(), state.mode === 'earth' ? 7 : 4), { duration: 1 });
+    const zoom = Math.max(flat.getZoom(), state.mode === 'earth' ? 7 : 4);
+    let target = L.latLng(lat, lng);
+    if (sheetOpen()) {
+      // Markazni pastga surib, nuqtani karta ustidagi qismga chiqaramiz
+      const pt = flat.project(target, zoom).add([0, flatEl.clientHeight * SHEET_OFFSET]);
+      target = flat.unproject(pt, zoom);
+    }
+    flat.flyTo(target, zoom, { duration: 1 });
     return Promise.resolve();
   }
   return globe.flyTo(lat, lng, dist, ms);
@@ -563,9 +589,9 @@ function creditItem(label, c) {
   return `<li><b>${esc(label)}:</b> <a href="${c.url}" target="_blank" rel="noopener">${title}</a>${c.artist ? ` · ${esc(t('common.author'))}: ${esc(c.artist)}` : ''}${lic ? ` · ${esc(t('common.license'))}: ${lic}` : ''}${c.title ? ` <span class="muted">(${esc(c.text)})</span>` : ''}</li>`;
 }
 
-function metricText(m) {
+function metricText(m, { avgTag = true } = {}) {
   const text = m[lang()] || m.uz;
-  return `${esc(text)}${m.planetAvg ? ` <small class="avg">${esc(t('metric.planetAvg'))}</small>` : ''}${
+  return `${esc(text)}${m.planetAvg && avgTag ? ` <small class="avg">${esc(t('metric.planetAvg'))}</small>` : ''}${
     m.src ? ` <a class="src" href="${m.src.url}" target="_blank" rel="noopener" title="${esc(m.src.label)}">[${esc(t('common.source'))}]</a>` : ''
   }`;
 }
@@ -581,7 +607,7 @@ function metricsTable(site, place) {
     if (earth) {
       earthCell = earth[k]
         ? metricText(earth[k])
-        : `${noData()}${ref[k] ? `<small class="ref">${esc(t('detail.earthAvg'))}: ${metricText(ref[k])}</small>` : ''}`;
+        : `${noData()}${ref[k] ? `<small class="ref">${esc(t('detail.earthAvg'))}: ${metricText(ref[k], { avgTag: false })}</small>` : ''}`;
     }
     const bodyCell = m.body?.[k] ? metricText(m.body[k]) : noData();
     return `<tr><th scope="row">${esc(t(`metric.${k}`))}</th>${earth ? `<td>${earthCell}</td>` : ''}<td>${bodyCell}</td></tr>`;
@@ -624,6 +650,7 @@ function actionsRow(id, isSite) {
 function openDetails(id, isSite) {
   details.hidden = false;
   details.scrollTop = 0;
+  syncGlobeOffset();
   const compare = body.querySelector('.compare');
   if (compare) {
     compare.querySelector('input').addEventListener('input', (e) => compare.style.setProperty('--pos', `${e.target.value}%`));
@@ -823,6 +850,7 @@ function selectPlace(id, { fromRoute = false, flyMs = 1200 } = {}) {
 function closeDetails({ silent = false } = {}) {
   details.hidden = true;
   state.selected = null;
+  syncGlobeOffset();
   if (!silent) {
     render();
     setRoute(`/${ROUTE[state.mode]}`);
@@ -949,7 +977,7 @@ function openCompare() {
           ${row(t('compare.type'), (s) => esc(typeLabel(s.type)))}
           ${PARAM_KEYS.map((k) => row(t(`param.${k}`), (s) => (s.params ? `<span class="minibar" style="--v:${s.params[k] * 10}%"></span> ${s.params[k]}` : '—'))).join('')}
           ${row(t('metric.soil'), soil)}
-          ${row(t('detail.missions'), (s) => esc(String((s.missions || []).length)))}
+          ${row(t('compare.missions'), (s) => esc(String((s.missions || []).length)))}
         </tbody>
       </table>
     </div>`;

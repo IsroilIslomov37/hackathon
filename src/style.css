@@ -167,8 +167,11 @@ body:not([data-mode='earth']) #type-filter { display: none; }
 #globe, #flatmap { position: absolute; inset: 0; background: #05070d; overflow: hidden; }
 #globe {
   cursor: grab;
-  /* Atmosfera o'rniga yengil CSS nur (GPU sarflamaydi) */
-  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--glow, transparent) 22%, transparent) 0, transparent 38%), #05070d;
+  /* Atmosfera o'rniga yengil CSS nur va oddiy yulduzlar (globe.js chizadi; GPU sarflamaydi) */
+  background:
+    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--glow, transparent) 22%, transparent) 0, transparent 38%),
+    var(--stars, none) 0 0 / 1024px 1024px repeat,
+    #05070d;
 }
 #globe canvas { display: block; }
 /* NASA tile'lari yuklanguncha qora tuynuk emas, sayyora rangi ko'rinsin */
@@ -566,6 +569,7 @@ ol.timeline em { font-style: normal; color: var(--muted); font-size: 11px; }
 .intro-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
 .qr { display: inline-flex; align-items: center; gap: 12px; margin: 24px 0 0; padding: 10px 14px; border-radius: 12px; background: var(--panel); border: 1px solid var(--border); text-align: left; font-size: 12px; color: var(--muted); }
 .qr img { border-radius: 6px; background: #fff; padding: 4px; }
+.disclaimer { max-width: 600px; margin: 18px auto 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
 
 .btn {
   display: inline-flex;
@@ -746,7 +750,8 @@ body[data-mode='moon'] .modes button[data-mode='moon'] { background: #c9d1e01f; 
 .formula code { background: var(--panel-2); padding: 3px 6px; border-radius: 6px; }
 .q-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
 .q-clue { font-size: 20px; line-height: 1.4; margin: 16px 0 20px; }
-.q-img { margin-top: 14px; aspect-ratio: 16 / 9; border-radius: 12px; }
+.q-img { position: relative; overflow: hidden; margin-top: 14px; aspect-ratio: 16 / 9; max-width: 100%; border-radius: 12px; background: var(--panel-2); }
+.q-img picture, .q-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .q-levels { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .q-level {
   display: grid;

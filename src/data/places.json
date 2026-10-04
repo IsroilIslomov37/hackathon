@@ -50,16 +50,30 @@
           "uz": "Rocknest qumida perxloratlar aniqlangan (SAM asbobi)",
           "en": "Perchlorates detected in Rocknest sand (SAM instrument)",
           "src": {
-            "label": "Glavin va boshq., 2013, JGR Planets",
+            "label": "Glavin et al., 2013, JGR Planets",
             "url": "https://doi.org/10.1002/jgre.20144"
           }
         }
       },
       "earth": {
         "atacama": {
-          "temp": null,
+          "temp": {
+            "uz": "O'rtacha 16,5 °C (1995) va 16,6 °C (1996); eng yuqori 37,9 °C, eng past −5,7 °C",
+            "en": "Mean 16.5 °C (1995) and 16.6 °C (1996); max 37.9 °C, min −5.7 °C",
+            "src": {
+              "label": "McKay et al., 2003, Astrobiology",
+              "url": "https://doi.org/10.1089/153110703769016460"
+            }
+          },
           "pressure": null,
-          "humidity": null,
+          "humidity": {
+            "uz": "1994–1998 yillarda faqat bitta sezilarli yomg'ir (2,3 mm); tuproqdagi suyuq suv jami 65–85 soat saqlangan",
+            "en": "Only one significant rain event (2.3 mm) in 1994–1998; liquid water stayed in the soil for 65–85 h in total",
+            "src": {
+              "label": "McKay et al., 2003, Astrobiology",
+              "url": "https://doi.org/10.1089/153110703769016460"
+            }
+          },
           "uv": null,
           "soil": {
             "uz": "Nitrat konlarida perxloratlar uchraydi",
@@ -87,8 +101,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -96,8 +110,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -167,7 +181,7 @@
           "uz": "Jarozit va gematit (Mössbauer spektrometri)",
           "en": "Jarosite and hematite (Mössbauer spectrometer)",
           "src": {
-            "label": "Klingelhöfer va boshq., 2004, Science",
+            "label": "Klingelhöfer et al., 2004, Science",
             "url": "https://doi.org/10.1126/science.1104653"
           }
         }
@@ -182,7 +196,7 @@
             "uz": "Jarozit, gematit va temir sulfatlari",
             "en": "Jarosite, hematite and iron sulfates",
             "src": {
-              "label": "Fernández-Remolar va boshq., 2005, EPSL",
+              "label": "Fernández-Remolar et al., 2005, EPSL",
               "url": "https://doi.org/10.1016/j.epsl.2005.09.043"
             }
           }
@@ -190,8 +204,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -199,8 +213,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -239,21 +253,19 @@
     "metrics": {
       "body": {
         "temp": {
-          "uz": "≈ −63 °C",
-          "en": "≈ −63 °C",
-          "planetAvg": true,
+          "uz": "Kunduzi 2 m balandlikda odatda ≈ −30 °C (243 K) gacha isigan (Phoenix MET)",
+          "en": "Daytime air at 2 m typically rose to ≈ −30 °C (243 K) (Phoenix MET)",
           "src": {
-            "label": "NASA NSSDC Mars Fact Sheet",
-            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+            "label": "Davy et al., 2010, JGR Planets",
+            "url": "https://doi.org/10.1029/2009JE003444"
           }
         },
         "pressure": {
-          "uz": "636 Pa (6,36 mbar); mavsumga qarab 400–870 Pa",
-          "en": "636 Pa (6.36 mbar); 400–870 Pa by season",
-          "planetAvg": true,
+          "uz": "151 sollik missiyada ≈ 860 Pa dan 724 Pa gacha pasaygan (kunlik o'rtacha minimumi, 140-sol)",
+          "en": "Fell from ≈ 860 Pa to 724 Pa during the 151-sol mission (daily-average minimum, sol 140)",
           "src": {
-            "label": "NASA NSSDC Mars Fact Sheet",
-            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+            "label": "Taylor et al., 2010, JGR Planets",
+            "url": "https://doi.org/10.1029/2009JE003422"
           }
         },
         "humidity": {
@@ -270,14 +282,21 @@
           "uz": "Tuproqda perxlorat; sayoz qatlamda suv muzi",
           "en": "Perchlorate in soil; shallow water ice",
           "src": {
-            "label": "Hecht va boshq., 2009, Science",
+            "label": "Hecht et al., 2009, Science",
             "url": "https://doi.org/10.1126/science.1172466"
           }
         }
       },
       "earth": {
         "dry-valleys": {
-          "temp": null,
+          "temp": {
+            "uz": "Yillik o'rtacha −14,8 °C dan −30,0 °C gacha (stansiya va davrga qarab)",
+            "en": "Mean annual −14.8 °C to −30.0 °C (depending on station and period)",
+            "src": {
+              "label": "Doran et al., 2002, JGR Atmospheres",
+              "url": "https://doi.org/10.1029/2001JD002045"
+            }
+          },
           "pressure": null,
           "humidity": null,
           "uv": null,
@@ -286,8 +305,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -295,8 +314,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -375,8 +394,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -384,8 +403,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -465,8 +484,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -474,8 +493,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -545,7 +564,7 @@
           "uz": "Kremniyga boy (opal) yotqiziqlar",
           "en": "Silica-rich (opaline) deposits",
           "src": {
-            "label": "Squyres va boshq., 2008, Science",
+            "label": "Squyres et al., 2008, Science",
             "url": "https://doi.org/10.1126/science.1155429"
           }
         }
@@ -561,8 +580,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -570,8 +589,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -641,7 +660,7 @@
           "uz": "Suv ta'sirida o'zgargan magmatik jinslar",
           "en": "Aqueously altered igneous rocks",
           "src": {
-            "label": "Farley va boshq., 2022, Science",
+            "label": "Farley et al., 2022, Science",
             "url": "https://doi.org/10.1126/science.abo2196"
           }
         }
@@ -664,8 +683,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -673,8 +692,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -745,7 +764,7 @@
           "uz": "Xlorid tuzlari konlari",
           "en": "Chloride-bearing deposits",
           "src": {
-            "label": "Osterloo va boshq., 2008, Science",
+            "label": "Osterloo et al., 2008, Science",
             "url": "https://doi.org/10.1126/science.1150690"
           }
         }
@@ -761,8 +780,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -770,8 +789,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -857,8 +876,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -866,8 +885,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -946,8 +965,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -955,8 +974,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -1042,8 +1061,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -1051,8 +1070,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -1131,8 +1150,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -1140,8 +1159,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -1220,8 +1239,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -1229,8 +1248,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -1316,8 +1335,8 @@
       },
       "earthReference": {
         "temp": {
-          "uz": "15 °C (Yer o'rtachasi)",
-          "en": "15 °C (Earth average)",
+          "uz": "15 °C",
+          "en": "15 °C",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",
@@ -1325,8 +1344,8 @@
           }
         },
         "pressure": {
-          "uz": "1014 mbar (Yer o'rtachasi)",
-          "en": "1014 mbar (Earth average)",
+          "uz": "1014 mbar",
+          "en": "1014 mbar",
           "planetAvg": true,
           "src": {
             "label": "NASA NSSDC Earth Fact Sheet",

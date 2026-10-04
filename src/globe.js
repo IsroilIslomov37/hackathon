@@ -25,7 +25,39 @@ function dotTexture() {
   return new THREE.CanvasTexture(c);
 }
 
+// Oddiy yulduzli fon: bir marta 2D canvas'da chiziladi va CSS fon (--stars) sifatida qo'yiladi.
+// WebGL kadrlariga qo'shilmaydi, shuning uchun globus tezligiga ta'sir qilmaydi.
+function paintStars(el) {
+  const TILE = 1024; // CSS'dagi background-size bilan bir xil
+  const scale = Math.min(2, window.devicePixelRatio || 1);
+  const c = document.createElement('canvas');
+  c.width = c.height = Math.round(TILE * scale);
+  const g = c.getContext('2d');
+  g.scale(scale, scale);
+  // Doimiy seed: har safar bir xil yulduzlar naqshi chiqadi
+  let seed = 20261004;
+  const rnd = () => {
+    seed = (seed + 0x6d2b79f5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  const tints = ['255,255,255', '255,255,255', '255,255,255', '200,220,255', '255,236,210'];
+  for (let i = 0; i < 260; i++) {
+    const bright = rnd() < 0.06;
+    const r = bright ? 0.9 + rnd() * 0.6 : 0.35 + rnd() * 0.45;
+    g.fillStyle = `rgba(${tints[Math.floor(rnd() * tints.length)]},${(bright ? 0.75 : 0.3) + rnd() * 0.35})`;
+    g.beginPath();
+    g.arc(rnd() * TILE, rnd() * TILE, r, 0, Math.PI * 2);
+    g.fill();
+  }
+  c.toBlob((blob) => {
+    if (blob) el.style.setProperty('--stars', `url(${URL.createObjectURL(blob)})`);
+  });
+}
+
 export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading = () => {} }) {
+  paintStars(el);
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
   el.appendChild(renderer.domElement);
@@ -100,6 +132,17 @@ export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading
     if (!raf) raf = requestAnimationFrame(tick);
   }
 
+  // Globus markazini ekranda yuqoriga surish (masalan, telefonda pastki karta ochiq bo'lsa).
+  // Kamera kadri siljiydi, aylanish va nuqtani topish mantiqi o'zgarmaydi.
+  let offsetFrac = 0;
+  function applyOffset() {
+    const w = el.clientWidth;
+    const h = el.clientHeight;
+    if (!w || !h) return;
+    if (offsetFrac) camera.setViewOffset(w, h, 0, Math.round(h * offsetFrac), w, h);
+    else camera.clearViewOffset();
+  }
+
   function resize() {
     const w = el.clientWidth;
     const h = el.clientHeight;
@@ -107,6 +150,7 @@ export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading
     renderer.setSize(w, h);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
+    applyOffset();
     requestRender();
   }
   new ResizeObserver(resize).observe(el);
@@ -328,6 +372,13 @@ export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading
       };
       requestRender();
       return new Promise((r) => setTimeout(r, ms));
+    },
+    // frac: ekran balandligining qancha qismiga yuqoriga surish (0 = markazda)
+    setCenterOffset(frac) {
+      if (frac === offsetFrac) return;
+      offsetFrac = frac;
+      applyOffset();
+      requestRender();
     },
     zoomTo(dist, ms = 500) {
       tween = { t: 0, dur: ms / 1000, from: { dist: view.dist }, to: { dist } };
