@@ -25,42 +25,75 @@
         <div class="stats" id="intro-stats"></div>
 
         <div class="intro-actions">
-          <button class="btn primary" data-analog="all"><i data-lucide="globe"></i>Xaritani ochish</button>
-          <button class="btn mars" data-analog="mars"><i data-lucide="orbit"></i>Mars analoglari</button>
-          <button class="btn moon" data-analog="moon"><i data-lucide="moon"></i>Oy analoglari</button>
+          <button class="btn primary" data-mode="earth"><i data-lucide="globe"></i>Yer xaritasi</button>
+          <button class="btn mars" data-mode="mars"><i data-lucide="orbit"></i>Mars xaritasi</button>
+          <button class="btn moon" data-mode="moon"><i data-lucide="moon"></i>Oy xaritasi</button>
         </div>
       </div>
     </div>
 
-    <div id="app">
-      <aside id="sidebar">
-        <header class="brand">
-          <button id="open-intro" aria-label="Loyiha haqida"><i data-lucide="info"></i></button>
+    <header id="topbar">
+      <div class="top-brand">
+        <svg class="logo" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="17" cy="21" r="12" fill="#2c7fd0" />
+          <circle cx="32" cy="9" r="5" fill="#ff6b4a" />
+          <path d="M26 12.5C22 14 19 17 17.5 21" fill="none" stroke="#ff6b4a" stroke-width="1.4" stroke-dasharray="2 2" />
+        </svg>
+        <div>
           <h1>Earth Analogs</h1>
           <p>Yerdagi Oy va Marsga o'xshash joylar</p>
-        </header>
+        </div>
+      </div>
 
+      <nav class="modes" id="modes" aria-label="Xarita tanlash">
+        <button data-mode="earth" aria-pressed="true"><span class="mdot earth"></span>Yer</button>
+        <button data-mode="mars" aria-pressed="false"><span class="mdot mars"></span>Mars</button>
+        <button data-mode="moon" aria-pressed="false"><span class="mdot moon"></span>Oy</button>
+      </nav>
+
+      <div class="top-actions">
+        <button class="icon-btn" id="open-intro" aria-label="Loyiha haqida"><i data-lucide="info"></i></button>
+        <button class="quiz-btn" id="quiz-btn"><i data-lucide="target"></i><span>Qaysi sayyora?</span></button>
+      </div>
+    </header>
+
+    <div id="app">
+      <aside id="sidebar">
         <div class="filters">
+          <div class="search-row">
+            <input id="search" type="search" placeholder="Joy yoki davlat qidirish…" />
+            <button class="icon-btn" id="random-btn" aria-label="Tasodifiy joy" title="Tasodifiy joy"><i data-lucide="shuffle"></i></button>
+          </div>
           <div class="chips" id="analog-filter">
             <button class="chip active" data-value="all">Hammasi</button>
-            <button class="chip mars" data-value="mars">Mars</button>
-            <button class="chip moon" data-value="moon">Oy</button>
+            <button class="chip mars" data-value="mars">Mars analogi</button>
+            <button class="chip moon" data-value="moon">Oy analogi</button>
           </div>
           <div class="chips" id="type-filter"></div>
-          <input id="search" type="search" placeholder="Joy yoki davlat qidirish…" />
         </div>
 
         <p class="count" id="count"></p>
         <ul id="site-list"></ul>
       </aside>
 
-      <main id="map"></main>
+      <main id="maps">
+        <div id="globe"></div>
+        <div id="flatmap" hidden></div>
+        <button id="back-globe" class="back-globe"><i data-lucide="globe"></i>Globusga qaytish</button>
+        <p class="globe-hint">Globusning istalgan joyini bosing: o'sha joyning xaritasi ochiladi</p>
+        <div class="map-badge" id="map-badge"></div>
+      </main>
 
       <section id="details" class="hidden" aria-live="polite">
         <button id="close-details" aria-label="Yopish"><i data-lucide="x"></i></button>
         <div id="details-body"></div>
       </section>
     </div>
+
+    <div id="quiz" class="modal" role="dialog" aria-modal="true" aria-labelledby="quiz-title" hidden>
+      <div class="modal-card" id="quiz-card"></div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

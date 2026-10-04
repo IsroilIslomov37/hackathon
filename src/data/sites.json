@@ -30,7 +30,8 @@
         "text": "Wikimedia Commons",
         "url": "https://commons.wikimedia.org/wiki/File:Valle_de_la_Luna%2C_San_Pedro_de_Atacama%2C_Chile%2C_2016-02-01%2C_DD_152.JPG"
       }
-    }
+    },
+    "place": "gale"
   },
   {
     "id": "haughton",
@@ -60,10 +61,11 @@
         "url": "https://images.nasa.gov/details/PIA17932"
       },
       "earth": {
-        "text": "Esri World Imagery (sun'iy yo'ldosh)",
-        "url": "https://www.esri.com/"
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Edge_of_Haughton_Crater_(2672692755).jpg"
       }
-    }
+    },
+    "place": "jezero"
   },
   {
     "id": "rio-tinto",
@@ -96,7 +98,8 @@
         "text": "Wikimedia Commons",
         "url": "https://commons.wikimedia.org/wiki/File:Rio_tinto_river_CarolStoker_NASA_Ames_Research_Center.jpg"
       }
-    }
+    },
+    "place": "meridiani"
   },
   {
     "id": "dry-valleys",
@@ -126,10 +129,11 @@
         "url": "https://images.nasa.gov/details/PIA10792"
       },
       "earth": {
-        "text": "Esri World Imagery (sun'iy yo'ldosh)",
-        "url": "https://www.esri.com/"
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:South_Fork%2C_Upper_Wright_Valley%2C_Antarctica_2014_01.jpg"
       }
-    }
+    },
+    "place": "phoenix"
   },
   {
     "id": "mdrs",
@@ -162,7 +166,8 @@
         "text": "Wikimedia Commons",
         "url": "https://commons.wikimedia.org/wiki/File:Mars_Desert_Research_Station_2020.jpg"
       }
-    }
+    },
+    "place": "gale"
   },
   {
     "id": "hi-seas",
@@ -195,7 +200,8 @@
         "text": "Wikimedia Commons",
         "url": "https://commons.wikimedia.org/wiki/File:HI_SEAS_Analogue_suit_test.jpg"
       }
-    }
+    },
+    "place": "olympus"
   },
   {
     "id": "iceland",
@@ -228,7 +234,8 @@
         "text": "Wikimedia Commons",
         "url": "https://commons.wikimedia.org/wiki/File:B%C3%A1r%C3%B0arbunga_Volcano%2C_September_4_2014_-_15145875322.jpg"
       }
-    }
+    },
+    "place": "tharsis"
   },
   {
     "id": "svalbard",
@@ -258,10 +265,11 @@
         "url": "https://images.nasa.gov/details/PIA00290"
       },
       "earth": {
-        "text": "Esri World Imagery (sun'iy yo'ldosh)",
-        "url": "https://www.esri.com/"
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Haakon_VII_Land_Bockfjorden_IMG_5544_Risefjella_Kronprinsh%C3%B6gda_Bockfjorden_Adolfbreen.JPG"
       }
-    }
+    },
+    "place": null
   },
   {
     "id": "wadi-rum",
@@ -294,7 +302,8 @@
         "text": "Wikimedia Commons",
         "url": "https://commons.wikimedia.org/wiki/File:Mountain_in_Wadi_Rum%2C_Jordan.jpg"
       }
-    }
+    },
+    "place": "gale"
   },
   {
     "id": "dallol",
@@ -327,7 +336,8 @@
         "text": "Wikimedia Commons",
         "url": "https://commons.wikimedia.org/wiki/File:ET_Afar_asv2018-01_img48_Dallol.jpg"
       }
-    }
+    },
+    "place": "gusev"
   },
   {
     "id": "pilbara",
@@ -357,10 +367,11 @@
         "url": "https://images.nasa.gov/details/PIA25022"
       },
       "earth": {
-        "text": "Esri World Imagery (sun'iy yo'ldosh)",
-        "url": "https://www.esri.com/"
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Karijini_National_Park%2C_Pilbara_Region%2C_Western_Australia%2C_Dales_Gorge_02.jpg"
       }
-    }
+    },
+    "place": "jezero"
   },
   {
     "id": "meteor-crater",
@@ -393,7 +404,8 @@
         "text": "Wikimedia Commons",
         "url": "https://commons.wikimedia.org/wiki/File:Meteor_Crater_-_Arizona.jpg"
       }
-    }
+    },
+    "place": "ptolemaeus"
   },
   {
     "id": "cinder-lake",
@@ -423,10 +435,11 @@
         "url": "https://images.nasa.gov/details/as11-40-5951"
       },
       "earth": {
-        "text": "Esri World Imagery (sun'iy yo'ldosh)",
-        "url": "https://www.esri.com/"
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Cinder_Lake_Crater_Field_1.jpg"
       }
-    }
+    },
+    "place": "tranquility"
   },
   {
     "id": "ries",
@@ -457,9 +470,10 @@
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:N%C3%B6rdlinger_Ries_Relief_Map%2C_SRTM-1.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:N%C3%B6rdlinger_Ries_280805.jpg"
       }
-    }
+    },
+    "place": "cone"
   },
   {
     "id": "sudbury",
@@ -490,9 +504,10 @@
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Sudbury_Wanapitei_WorldWind.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:Shattercone_(Paleoproterozoic%2C_1.85_Ga%3B_Sudbury_Impact_Structure%2C_Ontario%2C_Canada)_(14824505423).jpg"
       }
-    }
+    },
+    "place": "orientale"
   },
   {
     "id": "lanzarote",
@@ -522,10 +537,11 @@
         "url": "https://images.nasa.gov/details/PIA12954"
       },
       "earth": {
-        "text": "Esri World Imagery (sun'iy yo'ldosh)",
-        "url": "https://www.esri.com/"
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Timanfaya_National_Park_landscape.jpg"
       }
-    }
+    },
+    "place": "marius"
   },
   {
     "id": "craters-of-the-moon",
@@ -555,10 +571,11 @@
         "url": "https://images.nasa.gov/details/as15-89-12100"
       },
       "earth": {
-        "text": "Esri World Imagery (sun'iy yo'ldosh)",
-        "url": "https://www.esri.com/"
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Craters_of_the_Moon_National_Monument_-_53.jpg"
       }
-    }
+    },
+    "place": "hadley"
   },
   {
     "id": "aralkum",
@@ -589,9 +606,10 @@
         "url": "https://images.nasa.gov/details/PIA10247"
       },
       "earth": {
-        "text": "Esri World Imagery (sun'iy yo'ldosh)",
-        "url": "https://www.esri.com/"
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Kemalar_qabristoni_58.jpg"
       }
-    }
+    },
+    "place": "chlorides"
   }
 ]
