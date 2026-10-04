@@ -3,128 +3,1346 @@
     "id": "gale",
     "body": "mars",
     "name": "Gale krateri",
-    "coords": [-5.4, 137.8],
+    "coords": [
+      -5.4,
+      137.8
+    ],
     "mission": "Curiosity (2012–)",
     "about": "154 km li qadimiy krater. Markazidagi qatlamli Sharp tog'i Mars iqlimi qanday o'zgarganini saqlab qolgan. Curiosity bu yerda tuproqda perxlorat tuzlarini ham topgan.",
-    "photo": "atacama-space"
+    "photo": "atacama-space",
+    "en": {
+      "name": "Gale crater",
+      "mission": "Curiosity (2012–)",
+      "about": "A 154 km ancient crater. Layered Mount Sharp at its centre records how the Martian climate changed. Curiosity also found perchlorate salts in the soil here."
+    },
+    "missionYear": 2012,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "≈ −63 °C",
+          "en": "≈ −63 °C",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "636 Pa (6,36 mbar); mavsumga qarab 400–870 Pa",
+          "en": "636 Pa (6.36 mbar); 400–870 Pa by season",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i ≈ 210 ppm",
+          "en": "Water vapour ≈ 210 ppm",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "uv": null,
+        "soil": {
+          "uz": "Rocknest qumida perxloratlar aniqlangan (SAM asbobi)",
+          "en": "Perchlorates detected in Rocknest sand (SAM instrument)",
+          "src": {
+            "label": "Glavin va boshq., 2013, JGR Planets",
+            "url": "https://doi.org/10.1002/jgre.20144"
+          }
+        }
+      },
+      "earth": {
+        "atacama": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": {
+            "uz": "Nitrat konlarida perxloratlar uchraydi",
+            "en": "Perchlorate occurs in the nitrate deposits",
+            "src": {
+              "label": "Ericksen, 1981, USGS Professional Paper 1188",
+              "url": "https://pubs.usgs.gov/publication/pp1188"
+            }
+          }
+        },
+        "mdrs": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        },
+        "wadi-rum": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "meridiani",
     "body": "mars",
     "name": "Meridiani Planum",
-    "coords": [-1.95, -5.53],
+    "coords": [
+      -1.95,
+      -5.53
+    ],
     "mission": "Opportunity (2004–2018)",
     "about": "Opportunity bu yerdagi qatlamli jinslarda gematit va jarozit topgan. Bu minerallar qadimda kislotali suv oqqanini ko'rsatadi.",
-    "photo": "rio-tinto-space"
+    "photo": "rio-tinto-space",
+    "en": {
+      "name": "Meridiani Planum",
+      "mission": "Opportunity (2004–2018)",
+      "about": "Opportunity found hematite and jarosite in layered rocks here, showing that acidic water once flowed."
+    },
+    "missionYear": 2004,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "≈ −63 °C",
+          "en": "≈ −63 °C",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "636 Pa (6,36 mbar); mavsumga qarab 400–870 Pa",
+          "en": "636 Pa (6.36 mbar); 400–870 Pa by season",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i ≈ 210 ppm",
+          "en": "Water vapour ≈ 210 ppm",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "uv": null,
+        "soil": {
+          "uz": "Jarozit va gematit (Mössbauer spektrometri)",
+          "en": "Jarosite and hematite (Mössbauer spectrometer)",
+          "src": {
+            "label": "Klingelhöfer va boshq., 2004, Science",
+            "url": "https://doi.org/10.1126/science.1104653"
+          }
+        }
+      },
+      "earth": {
+        "rio-tinto": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": {
+            "uz": "Jarozit, gematit va temir sulfatlari",
+            "en": "Jarosite, hematite and iron sulfates",
+            "src": {
+              "label": "Fernández-Remolar va boshq., 2005, EPSL",
+              "url": "https://doi.org/10.1016/j.epsl.2005.09.043"
+            }
+          }
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "phoenix",
     "body": "mars",
     "name": "Phoenix qo'nish joyi",
-    "coords": [68.22, -125.75],
+    "coords": [
+      68.22,
+      -125.75
+    ],
     "mission": "Phoenix (2008)",
     "about": "Shimoliy qutb atrofidagi tekislik. Phoenix tuproq ostidan muz va perxlorat tuzlarini topgan, yer yuzasi ko'pburchak naqshli.",
-    "photo": "dry-valleys-space"
+    "photo": "dry-valleys-space",
+    "en": {
+      "name": "Phoenix landing site",
+      "mission": "Phoenix (2008)",
+      "about": "Plains near the north pole. Phoenix found water ice and perchlorate salts under the soil; the ground has polygon patterns."
+    },
+    "missionYear": 2008,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "≈ −63 °C",
+          "en": "≈ −63 °C",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "636 Pa (6,36 mbar); mavsumga qarab 400–870 Pa",
+          "en": "636 Pa (6.36 mbar); 400–870 Pa by season",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i ≈ 210 ppm",
+          "en": "Water vapour ≈ 210 ppm",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "uv": null,
+        "soil": {
+          "uz": "Tuproqda perxlorat; sayoz qatlamda suv muzi",
+          "en": "Perchlorate in soil; shallow water ice",
+          "src": {
+            "label": "Hecht va boshq., 2009, Science",
+            "url": "https://doi.org/10.1126/science.1172466"
+          }
+        }
+      },
+      "earth": {
+        "dry-valleys": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "olympus",
     "body": "mars",
     "name": "Olympus Mons",
-    "coords": [18.65, -133.8],
+    "coords": [
+      18.65,
+      -133.8
+    ],
     "mission": "Orbitadan suratga olingan",
     "about": "Quyosh tizimidagi eng baland vulqon (~22 km). Gavayi vulqonlari kabi qalqonsimon bazalt vulqon, faqat ancha katta.",
-    "photo": "hi-seas-space"
+    "photo": "hi-seas-space",
+    "en": {
+      "name": "Olympus Mons",
+      "mission": "Imaged from orbit",
+      "about": "The tallest volcano in the Solar System (~22 km). A basaltic shield volcano like those of Hawaii, only far larger."
+    },
+    "missionYear": null,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "≈ −63 °C",
+          "en": "≈ −63 °C",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "636 Pa (6,36 mbar); mavsumga qarab 400–870 Pa",
+          "en": "636 Pa (6.36 mbar); 400–870 Pa by season",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i ≈ 210 ppm",
+          "en": "Water vapour ≈ 210 ppm",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "uv": null,
+        "soil": null
+      },
+      "earth": {
+        "hi-seas": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "tharsis",
     "body": "mars",
     "name": "Tharsis lava oqimlari",
-    "coords": [2.0, -112.0],
+    "coords": [
+      2,
+      -112
+    ],
     "approx": true,
     "mission": "Orbitadan suratga olingan",
     "about": "Marsdagi ulkan vulqonli hudud. Keng bazalt lava oqimlari Islandiyadagi yosh lava maydonlariga o'xshaydi. Marker hududning taxminiy markazida turibdi.",
-    "photo": "iceland-space"
+    "photo": "iceland-space",
+    "en": {
+      "name": "Tharsis lava flows",
+      "mission": "Imaged from orbit",
+      "about": "A huge volcanic region of Mars. Wide basaltic lava flows resemble young lava fields in Iceland. The marker sits at the approximate centre of the region."
+    },
+    "missionYear": null,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "≈ −63 °C",
+          "en": "≈ −63 °C",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "636 Pa (6,36 mbar); mavsumga qarab 400–870 Pa",
+          "en": "636 Pa (6.36 mbar); 400–870 Pa by season",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i ≈ 210 ppm",
+          "en": "Water vapour ≈ 210 ppm",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "uv": null,
+        "soil": null
+      },
+      "earth": {
+        "iceland": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "gusev",
     "body": "mars",
     "name": "Gusev krateri, Home Plate",
-    "coords": [-14.64, 175.53],
+    "coords": [
+      -14.64,
+      175.53
+    ],
     "mission": "Spirit (2004–2010)",
     "about": "Spirit roveri g'ildiragi bilan tuproqni qazib, kremniyga boy oq qatlam topgan. Bu qadimgi issiq buloqlar yoki bug' chiqqan joy izi deb hisoblanadi.",
-    "photo": "dallol-space"
+    "photo": "dallol-space",
+    "en": {
+      "name": "Gusev crater, Home Plate",
+      "mission": "Spirit (2004–2010)",
+      "about": "Spirit’s wheel dug up a bright silica-rich layer, thought to be a trace of ancient hot springs or fumaroles."
+    },
+    "missionYear": 2004,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "≈ −63 °C",
+          "en": "≈ −63 °C",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "636 Pa (6,36 mbar); mavsumga qarab 400–870 Pa",
+          "en": "636 Pa (6.36 mbar); 400–870 Pa by season",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i ≈ 210 ppm",
+          "en": "Water vapour ≈ 210 ppm",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "uv": null,
+        "soil": {
+          "uz": "Kremniyga boy (opal) yotqiziqlar",
+          "en": "Silica-rich (opaline) deposits",
+          "src": {
+            "label": "Squyres va boshq., 2008, Science",
+            "url": "https://doi.org/10.1126/science.1155429"
+          }
+        }
+      },
+      "earth": {
+        "dallol": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "jezero",
     "body": "mars",
     "name": "Jezero krateri",
-    "coords": [18.44, 77.45],
+    "coords": [
+      18.44,
+      77.45
+    ],
     "mission": "Perseverance (2021–)",
     "about": "Qadimgi krater ko'li va unga quyilgan daryo deltasi. Perseverance bu yerda o'tmishdagi hayot izlarini qidirib, namunalar yig'moqda.",
-    "photo": "pilbara-space"
+    "photo": "pilbara-space",
+    "en": {
+      "name": "Jezero crater",
+      "mission": "Perseverance (2021–)",
+      "about": "An ancient crater lake fed by a river delta. Perseverance is searching for signs of past life and collecting samples here."
+    },
+    "missionYear": 2021,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "≈ −63 °C",
+          "en": "≈ −63 °C",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "636 Pa (6,36 mbar); mavsumga qarab 400–870 Pa",
+          "en": "636 Pa (6.36 mbar); 400–870 Pa by season",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i ≈ 210 ppm",
+          "en": "Water vapour ≈ 210 ppm",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "uv": null,
+        "soil": {
+          "uz": "Suv ta'sirida o'zgargan magmatik jinslar",
+          "en": "Aqueously altered igneous rocks",
+          "src": {
+            "label": "Farley va boshq., 2022, Science",
+            "url": "https://doi.org/10.1126/science.abo2196"
+          }
+        }
+      },
+      "earth": {
+        "haughton": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        },
+        "pilbara": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "chlorides",
     "body": "mars",
     "name": "Janubiy tog'liklar, xlorid tuzlari",
-    "coords": [-30.0, -170.0],
+    "coords": [
+      -30,
+      -170
+    ],
     "approx": true,
     "mission": "Mars Odyssey va MRO orbitadan",
     "about": "Janubiy tog'liklarda yuzlab xlorid (tuz) konlari topilgan. Ular qurigan sho'r ko'llar izi bo'lishi mumkin. Marker hududning taxminiy markazida turibdi.",
-    "photo": "aralkum-space"
+    "photo": "aralkum-space",
+    "en": {
+      "name": "Southern highlands chloride salts",
+      "mission": "Mars Odyssey and MRO from orbit",
+      "about": "Hundreds of chloride (salt) deposits were found in the southern highlands. They may be traces of dried salty lakes. The marker sits at the approximate centre of the region."
+    },
+    "missionYear": null,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "≈ −63 °C",
+          "en": "≈ −63 °C",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "636 Pa (6,36 mbar); mavsumga qarab 400–870 Pa",
+          "en": "636 Pa (6.36 mbar); 400–870 Pa by season",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i ≈ 210 ppm",
+          "en": "Water vapour ≈ 210 ppm",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Mars Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+          }
+        },
+        "uv": null,
+        "soil": {
+          "uz": "Xlorid tuzlari konlari",
+          "en": "Chloride-bearing deposits",
+          "src": {
+            "label": "Osterloo va boshq., 2008, Science",
+            "url": "https://doi.org/10.1126/science.1150690"
+          }
+        }
+      },
+      "earth": {
+        "aralkum": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "tranquility",
     "body": "moon",
     "name": "Tinchlik dengizi (Apollo 11)",
-    "coords": [0.674, 23.473],
+    "coords": [
+      0.674,
+      23.473
+    ],
     "mission": "Apollo 11 (1969)",
     "about": "Insoniyat birinchi marta qadam qo'ygan bazalt tekislik. Armstrong va Aldrin bu yerda tuproq namunalari yig'ib, asboblar o'rnatgan.",
-    "photo": "cinder-lake-space"
+    "photo": "cinder-lake-space",
+    "en": {
+      "name": "Sea of Tranquility (Apollo 11)",
+      "mission": "Apollo 11 (1969)",
+      "about": "The basalt plain where humans first set foot. Armstrong and Aldrin collected soil samples and set up instruments here."
+    },
+    "missionYear": 1969,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "Ekvatorda 95–390 K (≈ −178…+117 °C)",
+          "en": "95–390 K at the equator (≈ −178…+117 °C)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "≈ 3×10⁻¹⁵ bar (tunda), amalda vakuum",
+          "en": "≈ 3×10⁻¹⁵ bar (night), practically vacuum",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Atmosfera deyarli yo'q (umumiy massasi ≈ 25 000 kg)",
+          "en": "Almost no atmosphere (total mass ≈ 25,000 kg)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "uv": null,
+        "soil": {
+          "uz": "Titanga boy dengiz bazaltlari (Apollo 11 namunalari)",
+          "en": "High-titanium mare basalts (Apollo 11 samples)",
+          "src": {
+            "label": "NASA Lunar Sample Compendium",
+            "url": "https://curator.jsc.nasa.gov/lunar/lsc/"
+          }
+        }
+      },
+      "earth": {
+        "cinder-lake": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "ptolemaeus",
     "body": "moon",
     "name": "Ptolemaeus krateri",
-    "coords": [-9.3, -1.9],
+    "coords": [
+      -9.3,
+      -1.9
+    ],
     "mission": "Apollo 12 orbitadan suratga olgan",
     "about": "Oyning tog'li qismidagi ~150 km li qadimiy krater. Uning ichidagi kichik yosh kraterlar Meteor Crater'ga o'xshash oddiy kosasimon shaklga ega.",
-    "photo": "meteor-crater-space"
+    "photo": "meteor-crater-space",
+    "en": {
+      "name": "Ptolemaeus crater",
+      "mission": "Imaged by Apollo 12 from orbit",
+      "about": "An ancient ~150 km crater in the lunar highlands. Small young craters inside it have the same simple bowl shape as Meteor Crater."
+    },
+    "missionYear": null,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "Ekvatorda 95–390 K (≈ −178…+117 °C)",
+          "en": "95–390 K at the equator (≈ −178…+117 °C)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "≈ 3×10⁻¹⁵ bar (tunda), amalda vakuum",
+          "en": "≈ 3×10⁻¹⁵ bar (night), practically vacuum",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Atmosfera deyarli yo'q (umumiy massasi ≈ 25 000 kg)",
+          "en": "Almost no atmosphere (total mass ≈ 25,000 kg)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "uv": null,
+        "soil": null
+      },
+      "earth": {
+        "meteor-crater": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "cone",
     "body": "moon",
     "name": "Cone krateri (Apollo 14)",
-    "coords": [-3.65, -17.47],
+    "coords": [
+      -3.65,
+      -17.47
+    ],
     "mission": "Apollo 14 (1971)",
     "about": "Apollo 14 ekipaji yosh Cone krateri chetigacha piyoda borib, zarba natijasida chiqqan katta toshlardan namuna olgan.",
-    "photo": "ries-space"
+    "photo": "ries-space",
+    "en": {
+      "name": "Cone crater (Apollo 14)",
+      "mission": "Apollo 14 (1971)",
+      "about": "The Apollo 14 crew walked up to the rim of young Cone crater and sampled large boulders thrown out by the impact."
+    },
+    "missionYear": 1971,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "Ekvatorda 95–390 K (≈ −178…+117 °C)",
+          "en": "95–390 K at the equator (≈ −178…+117 °C)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "≈ 3×10⁻¹⁵ bar (tunda), amalda vakuum",
+          "en": "≈ 3×10⁻¹⁵ bar (night), practically vacuum",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Atmosfera deyarli yo'q (umumiy massasi ≈ 25 000 kg)",
+          "en": "Almost no atmosphere (total mass ≈ 25,000 kg)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "uv": null,
+        "soil": {
+          "uz": "Fra Mauro brekchiyalari (Apollo 14 namunalari)",
+          "en": "Fra Mauro breccias (Apollo 14 samples)",
+          "src": {
+            "label": "NASA Lunar Sample Compendium",
+            "url": "https://curator.jsc.nasa.gov/lunar/lsc/"
+          }
+        }
+      },
+      "earth": {
+        "ries": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "orientale",
     "body": "moon",
     "name": "Sharqiy dengiz (Orientale) havzasi",
-    "coords": [-19.4, -92.8],
+    "coords": [
+      -19.4,
+      -92.8
+    ],
     "mission": "LRO va GRAIL orbitadan",
     "about": "Oydagi eng yaxshi saqlangan ko'p halqali zarba havzasi (~930 km). Sudbury kabi ulkan zarba tuzilmalarini tushunishga yordam beradi.",
-    "photo": "sudbury-space"
+    "photo": "sudbury-space",
+    "en": {
+      "name": "Orientale basin",
+      "mission": "LRO and GRAIL from orbit",
+      "about": "The best-preserved multi-ring impact basin on the Moon (~930 km). It helps explain giant impact structures like Sudbury."
+    },
+    "missionYear": null,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "Ekvatorda 95–390 K (≈ −178…+117 °C)",
+          "en": "95–390 K at the equator (≈ −178…+117 °C)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "≈ 3×10⁻¹⁵ bar (tunda), amalda vakuum",
+          "en": "≈ 3×10⁻¹⁵ bar (night), practically vacuum",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Atmosfera deyarli yo'q (umumiy massasi ≈ 25 000 kg)",
+          "en": "Almost no atmosphere (total mass ≈ 25,000 kg)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "uv": null,
+        "soil": null
+      },
+      "earth": {
+        "sudbury": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "marius",
     "body": "moon",
     "name": "Marius Hills chuquri",
-    "coords": [14.09, -56.8],
+    "coords": [
+      14.09,
+      -56.8
+    ],
     "mission": "Kaguya va LRO orbitadan",
     "about": "Lava tunneliga ochilishi mumkin bo'lgan chuqur (skylight). Bunday tunnellar kelajakda astronavtlar uchun radiatsiyadan boshpana bo'lishi mumkin.",
-    "photo": "lanzarote-space"
+    "photo": "lanzarote-space",
+    "en": {
+      "name": "Marius Hills pit",
+      "mission": "Kaguya and LRO from orbit",
+      "about": "A pit (skylight) that may open into a lava tube. Such tubes could shelter future astronauts from radiation."
+    },
+    "missionYear": null,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "Ekvatorda 95–390 K (≈ −178…+117 °C)",
+          "en": "95–390 K at the equator (≈ −178…+117 °C)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "≈ 3×10⁻¹⁵ bar (tunda), amalda vakuum",
+          "en": "≈ 3×10⁻¹⁵ bar (night), practically vacuum",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Atmosfera deyarli yo'q (umumiy massasi ≈ 25 000 kg)",
+          "en": "Almost no atmosphere (total mass ≈ 25,000 kg)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "uv": null,
+        "soil": null
+      },
+      "earth": {
+        "lanzarote": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   },
   {
     "id": "hadley",
     "body": "moon",
     "name": "Hadley Rille (Apollo 15)",
-    "coords": [26.1, 3.6],
+    "coords": [
+      26.1,
+      3.6
+    ],
     "mission": "Apollo 15 (1971)",
     "about": "Apollo 15 ekipaji o'rgangan ilonsimon vulqon kanali. U qadimgi lava oqimi yoki qulagan lava tunneli bo'lishi mumkin.",
-    "photo": "craters-of-the-moon-space"
+    "photo": "craters-of-the-moon-space",
+    "en": {
+      "name": "Hadley Rille (Apollo 15)",
+      "mission": "Apollo 15 (1971)",
+      "about": "A sinuous volcanic channel studied by the Apollo 15 crew. It may be an old lava channel or a collapsed lava tube."
+    },
+    "missionYear": 1971,
+    "metrics": {
+      "body": {
+        "temp": {
+          "uz": "Ekvatorda 95–390 K (≈ −178…+117 °C)",
+          "en": "95–390 K at the equator (≈ −178…+117 °C)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "≈ 3×10⁻¹⁵ bar (tunda), amalda vakuum",
+          "en": "≈ 3×10⁻¹⁵ bar (night), practically vacuum",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Atmosfera deyarli yo'q (umumiy massasi ≈ 25 000 kg)",
+          "en": "Almost no atmosphere (total mass ≈ 25,000 kg)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Moon Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+          }
+        },
+        "uv": null,
+        "soil": {
+          "uz": "Dengiz bazaltlari (Apollo 15 namunalari)",
+          "en": "Mare basalts (Apollo 15 samples)",
+          "src": {
+            "label": "NASA Lunar Sample Compendium",
+            "url": "https://curator.jsc.nasa.gov/lunar/lsc/"
+          }
+        }
+      },
+      "earth": {
+        "craters-of-the-moon": {
+          "temp": null,
+          "pressure": null,
+          "humidity": null,
+          "uv": null,
+          "soil": null
+        }
+      },
+      "earthReference": {
+        "temp": {
+          "uz": "15 °C (Yer o'rtachasi)",
+          "en": "15 °C (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "pressure": {
+          "uz": "1014 mbar (Yer o'rtachasi)",
+          "en": "1014 mbar (Earth average)",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        },
+        "humidity": {
+          "uz": "Suv bug'i juda o'zgaruvchan, odatda ≈ 1%",
+          "en": "Water vapour is highly variable, typically ≈ 1%",
+          "planetAvg": true,
+          "src": {
+            "label": "NASA NSSDC Earth Fact Sheet",
+            "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+          }
+        }
+      }
+    }
   }
 ]

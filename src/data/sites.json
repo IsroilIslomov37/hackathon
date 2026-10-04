@@ -24,14 +24,38 @@
     "credits": {
       "space": {
         "text": "NASA · PIA16204",
-        "url": "https://images.nasa.gov/details/PIA16204"
+        "url": "https://images.nasa.gov/details/PIA16204",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Valle_de_la_Luna%2C_San_Pedro_de_Atacama%2C_Chile%2C_2016-02-01%2C_DD_152.JPG"
+        "url": "https://commons.wikimedia.org/wiki/File:Valle_de_la_Luna%2C_San_Pedro_de_Atacama%2C_Chile%2C_2016-02-01%2C_DD_152.JPG",
+        "title": "Valle de la Luna, San Pedro de Atacama, Chile, 2016-02-01, DD 152.JPG",
+        "artist": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
     },
-    "place": "gale"
+    "place": "gale",
+    "en": {
+      "name": "Atacama Desert",
+      "country": "Chile",
+      "spaceMatch": "Martian plains (soil)",
+      "why": "The driest non-polar desert on Earth. Its soil contains perchlorates and nitrates like Mars, and microbes are extremely scarce.",
+      "usedBy": "NASA rover and drilling tests (ARADS project)"
+    },
+    "missions": [
+      {
+        "year": 2016,
+        "uz": "NASA ARADS: rover, burg'u va hayotni aniqlash asboblari dala sinovlari (2016–2019, har yili)",
+        "en": "NASA ARADS: field tests of a rover, drill and life-detection instruments (2016–2019, yearly)",
+        "src": {
+          "label": "NASA: ARADS",
+          "url": "https://www.nasa.gov/universe/atacama-rover-astrobiology-drilling-studies-arads/"
+        }
+      }
+    ]
   },
   {
     "id": "haughton",
@@ -58,14 +82,47 @@
     "credits": {
       "space": {
         "text": "NASA · PIA17932",
-        "url": "https://images.nasa.gov/details/PIA17932"
+        "url": "https://images.nasa.gov/details/PIA17932",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Edge_of_Haughton_Crater_(2672692755).jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:Edge_of_Haughton_Crater_(2672692755).jpg",
+        "title": "Edge of Haughton Crater (2672692755).jpg",
+        "artist": "Haughton Mars Project",
+        "license": "Public domain",
+        "licenseUrl": ""
       }
     },
-    "place": "jezero"
+    "place": "jezero",
+    "en": {
+      "name": "Haughton Crater, Devon Island",
+      "country": "Canada",
+      "spaceMatch": "Martian impact craters",
+      "why": "A ~23 km impact crater in a cold polar desert. Frozen ground and channels closely resemble Martian terrain.",
+      "usedBy": "NASA Haughton-Mars Project (HMP) and the Mars Society FMARS station"
+    },
+    "missions": [
+      {
+        "year": 1997,
+        "uz": "NASA Haughton-Mars Project boshlandi",
+        "en": "NASA Haughton-Mars Project begins",
+        "src": {
+          "label": "LPSC 2007, abstract 2426",
+          "url": "https://www.lpi.usra.edu/meetings/lpsc2007/pdf/2426.pdf"
+        }
+      },
+      {
+        "year": 2000,
+        "uz": "Mars Society FMARS stansiyasi qurib bitkazildi",
+        "en": "Mars Society completes the FMARS station",
+        "src": {
+          "label": "Wikipedia: FMARS",
+          "url": "https://en.wikipedia.org/wiki/Flashline_Mars_Arctic_Research_Station"
+        }
+      }
+    ]
   },
   {
     "id": "rio-tinto",
@@ -92,14 +149,47 @@
     "credits": {
       "space": {
         "text": "NASA · PIA03279",
-        "url": "https://images.nasa.gov/details/PIA03279"
+        "url": "https://images.nasa.gov/details/PIA03279",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Rio_tinto_river_CarolStoker_NASA_Ames_Research_Center.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:Rio_tinto_river_CarolStoker_NASA_Ames_Research_Center.jpg",
+        "title": "Rio tinto river CarolStoker NASA Ames Research Center.jpg",
+        "artist": "Carol Stoker, NASA",
+        "license": "Public domain",
+        "licenseUrl": ""
       }
     },
-    "place": "meridiani"
+    "place": "meridiani",
+    "en": {
+      "name": "Río Tinto river",
+      "country": "Spain",
+      "spaceMatch": "Meridiani Planum (Opportunity)",
+      "why": "Very acidic, iron-rich red water. The jarosite that forms here is the same mineral Opportunity found on Mars.",
+      "usedBy": "NASA MARTE drilling project, extremophile research"
+    },
+    "missions": [
+      {
+        "year": 2003,
+        "uz": "NASA MARTE: yer ostidagi hayotni qidirish uchun burg'ulash kampaniyasi (loyiha 2003–2006)",
+        "en": "NASA MARTE: drilling campaign to search for subsurface life (project 2003–2006)",
+        "src": {
+          "label": "NASA Ames: MARTE",
+          "url": "https://www.nasa.gov/centers/ames/research/technology-onepagers/marte.html"
+        }
+      },
+      {
+        "year": 2005,
+        "uz": "MARTE robotlashtirilgan burg'ulash tajribasi (simulyatsiya qilingan Mars missiyasi)",
+        "en": "MARTE robotic drilling experiment (simulated Mars mission)",
+        "src": {
+          "label": "Stoker va boshq., 2008, Astrobiology",
+          "url": "https://ui.adsabs.harvard.edu/abs/2008AsBio...8..921S/abstract"
+        }
+      }
+    ]
   },
   {
     "id": "dry-valleys",
@@ -126,14 +216,35 @@
     "credits": {
       "space": {
         "text": "NASA · PIA10792",
-        "url": "https://images.nasa.gov/details/PIA10792"
+        "url": "https://images.nasa.gov/details/PIA10792",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:South_Fork%2C_Upper_Wright_Valley%2C_Antarctica_2014_01.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:South_Fork%2C_Upper_Wright_Valley%2C_Antarctica_2014_01.jpg",
+        "title": "South Fork, Upper Wright Valley, Antarctica 2014 01.jpg",
+        "artist": "US Embassy New Zealand",
+        "license": "Public domain",
+        "licenseUrl": ""
       }
     },
-    "place": "phoenix"
+    "place": "phoenix",
+    "en": {
+      "name": "McMurdo Dry Valleys",
+      "country": "Antarctica",
+      "spaceMatch": "Polar and mid latitudes of Mars",
+      "why": "Among the coldest and driest valleys on Earth: wind and freezing have shaped the terrain much like on Mars.",
+      "usedBy": "NASA and NSF astrobiology expeditions"
+    },
+    "missions": [
+      {
+        "year": null,
+        "uz": "Viking davridan beri NASA va NSF tadqiqotlari",
+        "en": "NASA and NSF research since the Viking era",
+        "src": null
+      }
+    ]
   },
   {
     "id": "mdrs",
@@ -160,14 +271,38 @@
     "credits": {
       "space": {
         "text": "NASA · PIA16105",
-        "url": "https://images.nasa.gov/details/PIA16105"
+        "url": "https://images.nasa.gov/details/PIA16105",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Mars_Desert_Research_Station_2020.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:Mars_Desert_Research_Station_2020.jpg",
+        "title": "Mars Desert Research Station 2020.jpg",
+        "artist": "The Mars Society / MDRS",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
     },
-    "place": "gale"
+    "place": "gale",
+    "en": {
+      "name": "Mars Desert Research Station",
+      "country": "USA (Utah)",
+      "spaceMatch": "Martian sedimentary layers (Gale crater)",
+      "why": "Red-grey sedimentary rocks and dry river channels recall Gale crater in Curiosity’s images.",
+      "usedBy": "Mars Society: crews live “as if on Mars” for weeks"
+    },
+    "missions": [
+      {
+        "year": 2001,
+        "uz": "Mars Society MDRS stansiyasini ishga tushirdi",
+        "en": "Mars Society starts operating MDRS",
+        "src": {
+          "label": "Wikipedia: MDRS",
+          "url": "https://en.wikipedia.org/wiki/Mars_Desert_Research_Station"
+        }
+      }
+    ]
   },
   {
     "id": "hi-seas",
@@ -194,14 +329,47 @@
     "credits": {
       "space": {
         "text": "NASA · PIA02982",
-        "url": "https://images.nasa.gov/details/PIA02982"
+        "url": "https://images.nasa.gov/details/PIA02982",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:HI_SEAS_Analogue_suit_test.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:HI_SEAS_Analogue_suit_test.jpg",
+        "title": "HI SEAS Analogue suit test.jpg",
+        "artist": "Tiffany Swarmer, NASA",
+        "license": "Public domain",
+        "licenseUrl": ""
       }
     },
-    "place": "olympus"
+    "place": "olympus",
+    "en": {
+      "name": "Mauna Loa (HI-SEAS)",
+      "country": "USA (Hawaii)",
+      "spaceMatch": "Olympus Mons and the Tharsis volcanoes",
+      "why": "Slopes of a basaltic shield volcano: bare lava fields and basaltic soil resemble Martian volcanoes.",
+      "usedBy": "NASA-funded HI-SEAS long-duration isolation experiments"
+    },
+    "missions": [
+      {
+        "year": 1965,
+        "uz": "Katta orolda (Gavayi) Apollo astronavtlarining birinchi geologiya mashg'uloti (12–14 yanvar)",
+        "en": "First Apollo astronaut geology training on the Big Island, Hawaii (12–14 January)",
+        "src": {
+          "label": "USGS Open-File Report 2005-1190, 1-jadval",
+          "url": "https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf"
+        }
+      },
+      {
+        "year": 2013,
+        "uz": "Birinchi HI-SEAS izolyatsiya missiyasi (118 kun)",
+        "en": "First HI-SEAS isolation mission (118 days)",
+        "src": {
+          "label": "University of Hawaiʻi, 2013",
+          "url": "https://www.hawaii.edu/news/2013/08/14/groundbreaking-space-exploration-research-at-uh/"
+        }
+      }
+    ]
   },
   {
     "id": "iceland",
@@ -228,14 +396,53 @@
     "credits": {
       "space": {
         "text": "NASA · PIA05805",
-        "url": "https://images.nasa.gov/details/PIA05805"
+        "url": "https://images.nasa.gov/details/PIA05805",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:B%C3%A1r%C3%B0arbunga_Volcano%2C_September_4_2014_-_15145875322.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:B%C3%A1r%C3%B0arbunga_Volcano%2C_September_4_2014_-_15145875322.jpg",
+        "title": "Bárðarbunga Volcano, September 4 2014 - 15145875322.jpg",
+        "artist": "peterhartree",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
       }
     },
-    "place": "tharsis"
+    "place": "tharsis",
+    "en": {
+      "name": "Holuhraun lava field",
+      "country": "Iceland",
+      "spaceMatch": "Martian lava flows (Tharsis)",
+      "why": "Ice and volcanoes meet here. Fresh basaltic lava flows are an excellent model for Martian lava plains.",
+      "usedBy": "NASA SAND-E project, rover navigation tests"
+    },
+    "missions": [
+      {
+        "year": 1965,
+        "uz": "Apollo astronavtlarining geologiya mashg'uloti (12–16 iyul)",
+        "en": "Apollo astronaut geology training (12–16 July)",
+        "src": {
+          "label": "USGS Open-File Report 2005-1190, 1-jadval",
+          "url": "https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf"
+        }
+      },
+      {
+        "year": 1967,
+        "uz": "Ikkinchi Islandiya safari, 18 astronavt (2–8 iyul)",
+        "en": "Second Iceland trip, 18 astronauts (2–8 July)",
+        "src": {
+          "label": "USGS Open-File Report 2005-1190, 1-jadval",
+          "url": "https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf"
+        }
+      },
+      {
+        "year": null,
+        "uz": "NASA SAND-E rover sinovlari",
+        "en": "NASA SAND-E rover tests",
+        "src": null
+      }
+    ]
   },
   {
     "id": "svalbard",
@@ -262,14 +469,38 @@
     "credits": {
       "space": {
         "text": "NASA · PIA00290",
-        "url": "https://images.nasa.gov/details/PIA00290"
+        "url": "https://images.nasa.gov/details/PIA00290",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Haakon_VII_Land_Bockfjorden_IMG_5544_Risefjella_Kronprinsh%C3%B6gda_Bockfjorden_Adolfbreen.JPG"
+        "url": "https://commons.wikimedia.org/wiki/File:Haakon_VII_Land_Bockfjorden_IMG_5544_Risefjella_Kronprinsh%C3%B6gda_Bockfjorden_Adolfbreen.JPG",
+        "title": "Haakon VII Land Bockfjorden IMG 5544 Risefjella Kronprinshögda Bockfjorden Adolfbreen.JPG",
+        "artist": "Bjoertvedt",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       }
     },
-    "place": null
+    "place": null,
+    "en": {
+      "name": "Bockfjorden, Svalbard",
+      "country": "Norway",
+      "spaceMatch": "Martian carbonates (meteorite ALH84001)",
+      "why": "Volcanoes and warm springs under glaciers formed carbonate minerals like those in a meteorite from Mars.",
+      "usedBy": "AMASE expeditions: testing Curiosity and ExoMars instruments"
+    },
+    "missions": [
+      {
+        "year": 2003,
+        "uz": "Birinchi AMASE ekspeditsiyasi (Sverrefjell va Bockfjorden)",
+        "en": "First AMASE expedition (Sverrefjell and Bockfjorden)",
+        "src": {
+          "label": "Wikipedia: AMASE",
+          "url": "https://en.wikipedia.org/wiki/Arctic_Mars_Analog_Svalbard_Expedition"
+        }
+      }
+    ]
   },
   {
     "id": "wadi-rum",
@@ -291,19 +522,43 @@
       "isolation": 6
     },
     "why": "Temir oksidi bilan qizargan qum va qumtosh qoyalar Mars landshaftiga vizual jihatdan juda yaqin.",
-    "usedBy": "\"The Martian\" filmi, AMADEE-18 analog missiyasi (Avstriya kosmik forumi)",
+    "usedBy": "\"The Martian\" (2015) va boshqa filmlardagi Mars sahnalari shu yerda suratga olingan",
     "wiki": "https://en.wikipedia.org/wiki/Wadi_Rum",
     "credits": {
       "space": {
         "text": "NASA · PIA17944",
-        "url": "https://images.nasa.gov/details/PIA17944"
+        "url": "https://images.nasa.gov/details/PIA17944",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Mountain_in_Wadi_Rum%2C_Jordan.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:Mountain_in_Wadi_Rum%2C_Jordan.jpg",
+        "title": "Mountain in Wadi Rum, Jordan.jpg",
+        "artist": "Daniel Case",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       }
     },
-    "place": "gale"
+    "place": "gale",
+    "en": {
+      "name": "Wadi Rum",
+      "country": "Jordan",
+      "spaceMatch": "Red sandy plains of Mars",
+      "why": "Sand reddened by iron oxide and sandstone cliffs look strikingly like a Martian landscape.",
+      "usedBy": "Filming location for Mars scenes, including “The Martian” (2015)"
+    },
+    "missions": [
+      {
+        "year": 2015,
+        "uz": "\"The Martian\" filmi chiqdi (Mars sahnalari shu yerda olingan)",
+        "en": "\"The Martian\" released (Mars scenes filmed here)",
+        "src": {
+          "label": "Wikipedia: The Martian (film)",
+          "url": "https://en.wikipedia.org/wiki/The_Martian_(film)"
+        }
+      }
+    ]
   },
   {
     "id": "dallol",
@@ -330,14 +585,35 @@
     "credits": {
       "space": {
         "text": "NASA · PIA09491",
-        "url": "https://images.nasa.gov/details/PIA09491"
+        "url": "https://images.nasa.gov/details/PIA09491",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:ET_Afar_asv2018-01_img48_Dallol.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:ET_Afar_asv2018-01_img48_Dallol.jpg",
+        "title": "ET Afar asv2018-01 img48 Dallol.jpg",
+        "artist": "A.Savin",
+        "license": "FAL",
+        "licenseUrl": "http://artlibre.org/licence/lal/en"
       }
     },
-    "place": "gusev"
+    "place": "gusev",
+    "en": {
+      "name": "Dallol, Danakil Depression",
+      "country": "Ethiopia",
+      "spaceMatch": "Silica-rich soil found by Spirit (Gusev crater)",
+      "why": "A very acidic, salty and hot hydrothermal setting. One of the most extreme places to study the limits of life.",
+      "usedBy": "Europlanet astrobiology research"
+    },
+    "missions": [
+      {
+        "year": null,
+        "uz": "Europlanet astrobiologiya tadqiqotlari",
+        "en": "Europlanet astrobiology research",
+        "src": null
+      }
+    ]
   },
   {
     "id": "pilbara",
@@ -364,14 +640,28 @@
     "credits": {
       "space": {
         "text": "NASA · PIA25022",
-        "url": "https://images.nasa.gov/details/PIA25022"
+        "url": "https://images.nasa.gov/details/PIA25022",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Karijini_National_Park%2C_Pilbara_Region%2C_Western_Australia%2C_Dales_Gorge_02.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:Karijini_National_Park%2C_Pilbara_Region%2C_Western_Australia%2C_Dales_Gorge_02.jpg",
+        "title": "Karijini National Park, Pilbara Region, Western Australia, Dales Gorge 02.jpg",
+        "artist": "Gypsy Denise",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
     },
-    "place": "jezero"
+    "place": "jezero",
+    "en": {
+      "name": "Pilbara",
+      "country": "Australia",
+      "spaceMatch": "Jezero crater delta (Perseverance)",
+      "why": "3.5-billion-year-old stromatolites: the oldest traces of life on Earth. Perseverance looks for similar traces on Mars.",
+      "usedBy": "Training for NASA and Mars 2020 team geologists"
+    },
+    "missions": []
   },
   {
     "id": "meteor-crater",
@@ -398,14 +688,47 @@
     "credits": {
       "space": {
         "text": "NASA · as12-50-07431",
-        "url": "https://images.nasa.gov/details/as12-50-07431"
+        "url": "https://images.nasa.gov/details/as12-50-07431",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Meteor_Crater_-_Arizona.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:Meteor_Crater_-_Arizona.jpg",
+        "title": "Meteor Crater - Arizona.jpg",
+        "artist": "National Map Seamless Server",
+        "license": "Public domain",
+        "licenseUrl": ""
       }
     },
-    "place": "ptolemaeus"
+    "place": "ptolemaeus",
+    "en": {
+      "name": "Meteor Crater",
+      "country": "USA (Arizona)",
+      "spaceMatch": "Lunar craters (Apollo 12 from orbit)",
+      "why": "The best-preserved impact crater on Earth (~1.2 km). Its structure is almost identical to small lunar craters.",
+      "usedBy": "Geology training for Apollo astronauts"
+    },
+    "missions": [
+      {
+        "year": 1963,
+        "uz": "Apollo astronavtlarining birinchi geologiya mashg'uloti, 9 astronavt (16–18 yanvar)",
+        "en": "First Apollo astronaut geology training, 9 astronauts (16–18 January)",
+        "src": {
+          "label": "USGS Open-File Report 2005-1190, 1-jadval",
+          "url": "https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf"
+        }
+      },
+      {
+        "year": 1965,
+        "uz": "Takroriy mashg'ulot, 11 astronavt (22–23 aprel)",
+        "en": "Repeat training, 11 astronauts (22–23 April)",
+        "src": {
+          "label": "USGS Open-File Report 2005-1190, 1-jadval",
+          "url": "https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf"
+        }
+      }
+    ]
   },
   {
     "id": "cinder-lake",
@@ -432,14 +755,47 @@
     "credits": {
       "space": {
         "text": "NASA · as11-40-5951",
-        "url": "https://images.nasa.gov/details/as11-40-5951"
+        "url": "https://images.nasa.gov/details/as11-40-5951",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Cinder_Lake_Crater_Field_1.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:Cinder_Lake_Crater_Field_1.jpg",
+        "title": "Cinder Lake Crater Field 1.jpg",
+        "artist": "U.S. Geological Survey",
+        "license": "Public domain",
+        "licenseUrl": ""
       }
     },
-    "place": "tranquility"
+    "place": "tranquility",
+    "en": {
+      "name": "Cinder Lake Crater Field",
+      "country": "USA (Arizona)",
+      "spaceMatch": "Apollo 11 landing site (Sea of Tranquility)",
+      "why": "Artificial craters were blasted into black volcanic cinders to replicate the Apollo 11 landing site.",
+      "usedBy": "USGS and NASA: Apollo crews and lunar rover tests"
+    },
+    "missions": [
+      {
+        "year": 1970,
+        "uz": "Apollo 15 ekipaji krater maydonida mashq qildi (avgust)",
+        "en": "Apollo 15 crew trains in the crater field (August)",
+        "src": {
+          "label": "USGS Open-File Report 2005-1190, 1-jadval",
+          "url": "https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf"
+        }
+      },
+      {
+        "year": 1972,
+        "uz": "Apollo 17 davri mashg'uloti: Sunset Crater va Cinder Lake (2–3 noyabr)",
+        "en": "Apollo 17-era training: Sunset Crater and Cinder Lake (2–3 November)",
+        "src": {
+          "label": "USGS Open-File Report 2005-1190, 1-jadval",
+          "url": "https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf"
+        }
+      }
+    ]
   },
   {
     "id": "ries",
@@ -466,14 +822,38 @@
     "credits": {
       "space": {
         "text": "NASA · as14-64-9099",
-        "url": "https://images.nasa.gov/details/as14-64-9099"
+        "url": "https://images.nasa.gov/details/as14-64-9099",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:N%C3%B6rdlinger_Ries_280805.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:N%C3%B6rdlinger_Ries_280805.jpg",
+        "title": "Nördlinger Ries 280805.jpg",
+        "artist": "Bernd Haynold",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
       }
     },
-    "place": "cone"
+    "place": "cone",
+    "en": {
+      "name": "Nördlinger Ries",
+      "country": "Germany",
+      "spaceMatch": "Large lunar impact basins",
+      "why": "An ancient ~24 km crater. The suevite rock formed by the impact resembles breccias in lunar samples.",
+      "usedBy": "Apollo 14 crew training (1970)"
+    },
+    "missions": [
+      {
+        "year": 1970,
+        "uz": "Apollo 14 ekipaji mashg'uloti: Shepard, Mitchell, Cernan, Engle (11–13 avgust)",
+        "en": "Apollo 14 crew training: Shepard, Mitchell, Cernan, Engle (11–13 August)",
+        "src": {
+          "label": "USGS Open-File Report 2005-1190, 1-jadval",
+          "url": "https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf"
+        }
+      }
+    ]
   },
   {
     "id": "sudbury",
@@ -500,14 +880,47 @@
     "credits": {
       "space": {
         "text": "NASA · PIA13225",
-        "url": "https://images.nasa.gov/details/PIA13225"
+        "url": "https://images.nasa.gov/details/PIA13225",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Shattercone_(Paleoproterozoic%2C_1.85_Ga%3B_Sudbury_Impact_Structure%2C_Ontario%2C_Canada)_(14824505423).jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:Shattercone_(Paleoproterozoic%2C_1.85_Ga%3B_Sudbury_Impact_Structure%2C_Ontario%2C_Canada)_(14824505423).jpg",
+        "title": "Shattercone (Paleoproterozoic, 1.85 Ga; Sudbury Impact Structure, Ontario, Canada) (14824505423).jpg",
+        "artist": "James St. John",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
       }
     },
-    "place": "orientale"
+    "place": "orientale",
+    "en": {
+      "name": "Sudbury Basin",
+      "country": "Canada",
+      "spaceMatch": "Multi-ring lunar basins",
+      "why": "One of the largest and oldest impact structures on Earth. Its shatter cones were used to teach lunar geology.",
+      "usedBy": "Field training for Apollo 16 and 17 astronauts"
+    },
+    "missions": [
+      {
+        "year": 1971,
+        "uz": "Apollo 16 ekipaji mashg'uloti: Young, Duke, Haise (7–9 iyul)",
+        "en": "Apollo 16 crew training: Young, Duke, Haise (7–9 July)",
+        "src": {
+          "label": "USGS Open-File Report 2005-1190, 1-jadval",
+          "url": "https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf"
+        }
+      },
+      {
+        "year": 1972,
+        "uz": "Apollo 17 ekipaji mashg'uloti: Cernan, Schmitt, Evans (24–25 may)",
+        "en": "Apollo 17 crew training: Cernan, Schmitt, Evans (24–25 May)",
+        "src": {
+          "label": "USGS Open-File Report 2005-1190, 1-jadval",
+          "url": "https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf"
+        }
+      }
+    ]
   },
   {
     "id": "lanzarote",
@@ -534,14 +947,35 @@
     "credits": {
       "space": {
         "text": "NASA · PIA12954",
-        "url": "https://images.nasa.gov/details/PIA12954"
+        "url": "https://images.nasa.gov/details/PIA12954",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Timanfaya_National_Park_landscape.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:Timanfaya_National_Park_landscape.jpg",
+        "title": "Timanfaya National Park landscape.jpg",
+        "artist": "MiljenkoSuljic",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
     },
-    "place": "marius"
+    "place": "marius",
+    "en": {
+      "name": "Lanzarote (Timanfaya)",
+      "country": "Spain",
+      "spaceMatch": "Lunar lava tubes (Marius Hills)",
+      "why": "Basaltic lava fields and long lava tubes, similar to caves that could host future lunar bases.",
+      "usedBy": "ESA PANGAEA and CAVES astronaut training"
+    },
+    "missions": [
+      {
+        "year": null,
+        "uz": "ESA PANGAEA astronavtlar geologiya kursi",
+        "en": "ESA PANGAEA astronaut geology course",
+        "src": null
+      }
+    ]
   },
   {
     "id": "craters-of-the-moon",
@@ -568,14 +1002,47 @@
     "credits": {
       "space": {
         "text": "NASA · as15-89-12100",
-        "url": "https://images.nasa.gov/details/as15-89-12100"
+        "url": "https://images.nasa.gov/details/as15-89-12100",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Craters_of_the_Moon_National_Monument_-_53.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:Craters_of_the_Moon_National_Monument_-_53.jpg",
+        "title": "Craters of the Moon National Monument - 53.jpg",
+        "artist": "dwhartwig",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
       }
     },
-    "place": "hadley"
+    "place": "hadley",
+    "en": {
+      "name": "Craters of the Moon",
+      "country": "USA (Idaho)",
+      "spaceMatch": "Lunar maria (basalt plains)",
+      "why": "Wide basaltic lava fields, cinder cones and lava caves. Even its name comes from its lunar look.",
+      "usedBy": "Apollo 14 astronaut training, NASA FINESSE project"
+    },
+    "missions": [
+      {
+        "year": 1969,
+        "uz": "Apollo 14 asosiy va zaxira ekipaji mashg'uloti (22–23 avgust)",
+        "en": "Apollo 14 prime and backup crew training (22–23 August)",
+        "src": {
+          "label": "USGS Open-File Report 2005-1190, 1-jadval",
+          "url": "https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf"
+        }
+      },
+      {
+        "year": 1971,
+        "uz": "Takroriy dala mashg'uloti, Butte Crater (23–25 iyun)",
+        "en": "Repeat field training, Butte Crater (23–25 June)",
+        "src": {
+          "label": "USGS Open-File Report 2005-1190, 1-jadval",
+          "url": "https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf"
+        }
+      }
+    ]
   },
   {
     "id": "aralkum",
@@ -603,13 +1070,89 @@
     "credits": {
       "space": {
         "text": "NASA · PIA10247",
-        "url": "https://images.nasa.gov/details/PIA10247"
+        "url": "https://images.nasa.gov/details/PIA10247",
+        "license": "Public domain (NASA)",
+        "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       },
       "earth": {
         "text": "Wikimedia Commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Kemalar_qabristoni_58.jpg"
+        "url": "https://commons.wikimedia.org/wiki/File:Kemalar_qabristoni_58.jpg",
+        "title": "Kemalar qabristoni 58.jpg",
+        "artist": "MarjonaKhidirova",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
     },
-    "place": "chlorides"
+    "place": "chlorides",
+    "en": {
+      "name": "Aralkum (dry Aral Sea bed)",
+      "country": "Uzbekistan / Kazakhstan",
+      "spaceMatch": "Dried lakes and salt deposits on Mars",
+      "why": "Proposal: a dried salt lake bed. It could serve as a model for how ancient Martian lakes dried out and left salt layers.",
+      "usedBy": "Not an official analog; proposed by our team"
+    },
+    "missions": []
+  },
+  {
+    "id": "qizilqum",
+    "name": "Qizilqum cho'li",
+    "country": "O'zbekiston / Qozog'iston",
+    "coords": [
+      42,
+      64
+    ],
+    "analog": "mars",
+    "type": "desert",
+    "proposed": true,
+    "photo": false,
+    "spaceMatch": "Marsdagi qum tepaliklari (dyunalar)",
+    "params": null,
+    "why": "Taklif: Markaziy Osiyodagi keng qumli cho'l. Quruq iqlim va qum tepaliklari Mars dyunalarini o'rganish uchun model bo'lishi mumkin.",
+    "usedBy": "Rasmiy analog emas, jamoamiz taklifi",
+    "wiki": "https://en.wikipedia.org/wiki/Kyzylkum_Desert",
+    "place": null,
+    "missions": [],
+    "credits": {
+      "earth": null,
+      "space": null
+    },
+    "en": {
+      "name": "Kyzylkum Desert",
+      "country": "Uzbekistan / Kazakhstan",
+      "spaceMatch": "Martian dunes",
+      "why": "Proposal: a vast sandy desert in Central Asia. Its dry climate and dunes could help study Martian dunes.",
+      "usedBy": "Not an official analog; proposed by our team"
+    }
+  },
+  {
+    "id": "ustyurt",
+    "name": "Ustyurt platosi (chinklar)",
+    "country": "O'zbekiston / Qozog'iston",
+    "coords": [
+      44,
+      57.5
+    ],
+    "analog": "mars",
+    "type": "desert",
+    "proposed": true,
+    "photo": false,
+    "spaceMatch": "Marsdagi qatlamli jarliklar",
+    "params": null,
+    "why": "Taklif: tekis plato va uning tik jarliklari (chinklar) qatlamli jinslarni ochib beradi. Marsdagi qatlamli jarliklarni tushuntirishda model bo'lishi mumkin.",
+    "usedBy": "Rasmiy analog emas, jamoamiz taklifi",
+    "wiki": "https://en.wikipedia.org/wiki/Ustyurt_Plateau",
+    "place": null,
+    "missions": [],
+    "credits": {
+      "earth": null,
+      "space": null
+    },
+    "en": {
+      "name": "Ustyurt Plateau (chinks)",
+      "country": "Uzbekistan / Kazakhstan",
+      "spaceMatch": "Layered scarps on Mars",
+      "why": "Proposal: a flat plateau whose steep escarpments (chinks) expose layered rock. It could help explain layered scarps on Mars.",
+      "usedBy": "Not an official analog; proposed by our team"
+    }
   }
 ]

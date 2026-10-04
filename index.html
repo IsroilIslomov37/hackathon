@@ -2,33 +2,84 @@
 <html lang="uz">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Earth Analogs Explorer</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='26' fill='%23ff6b4a'/><ellipse cx='50' cy='50' rx='46' ry='14' fill='none' stroke='%23c9d1e0' stroke-width='6' transform='rotate(-20 50 50)'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Earth Analogs Explorer · Yerdagi Oy va Mars analoglari</title>
+    <meta
+      name="description"
+      content="Yerdagi Oy va Marsga o'xshash joylar: haqiqiy NASA suratlari, 3D globus, ilmiy ko'rsatkichlar va viktorina. NASA Space Apps Challenge loyihasi."
+    />
+    <meta name="theme-color" content="#0b1020" />
+    <link rel="canonical" href="https://hackathon-rho-flax.vercel.app/" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+
+    <!-- Open Graph / Twitter: havolani ulashganda chiqadigan kartochka -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Earth Analogs Explorer" />
+    <meta property="og:title" content="Earth Analogs Explorer" />
+    <meta
+      property="og:description"
+      content="Yerdagi Oy va Marsga o'xshash 20 ta joy: haqiqiy NASA suratlari, Yer / Mars / Oy globuslari va viktorina."
+    />
+    <meta property="og:url" content="https://hackathon-rho-flax.vercel.app/" />
+    <meta property="og:image" content="https://hackathon-rho-flax.vercel.app/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="uz_UZ" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Earth Analogs Explorer" />
+    <meta
+      name="twitter:description"
+      content="Yerdagi Oy va Marsga o'xshash joylar: haqiqiy NASA suratlari, 3D globus va viktorina."
+    />
+    <meta name="twitter:image" content="https://hackathon-rho-flax.vercel.app/og.jpg" />
   </head>
-  <body>
-    <div id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+  <body data-mode="earth" data-view="globe">
+    <!-- Landing / "Loyiha haqida" oynasi. hidden bo'lganda DOM'da joy egallamaydi. -->
+    <div id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title" hidden>
       <div class="intro-card">
-        <p class="eyebrow">NASA Space Apps · Earth Analogs</p>
-        <h2 id="intro-title">Marsga uchishdan oldin <span>Yerda</span> mashq qilamiz</h2>
-        <p class="lead">
-          Astronavtlar va roverlar Oy hamda Marsga borishdan oldin Yerdagi o'xshash joylarda sinovdan o'tadi.
-          Bu joylar <strong>"analog"</strong> deb ataladi.
-        </p>
+        <p class="eyebrow" data-i18n="intro.eyebrow">NASA Space Apps · Earth Analogs</p>
+        <h2 id="intro-title" data-i18n-html="intro.title">Marsga uchishdan oldin <span>Yerda</span> mashq qilamiz</h2>
+        <p class="lead" data-i18n="intro.lead"></p>
 
         <div class="reasons">
-          <div><span class="reason-icon"><i data-lucide="graduation-cap"></i></span><strong>Mashg'ulot</strong><p>Apollo ekipajlari kraterlarda geologiyani o'rgangan</p></div>
-          <div><span class="reason-icon"><i data-lucide="bot"></i></span><strong>Texnika sinovi</strong><p>Roverlar va burg'ular cho'llarda sinaladi</p></div>
-          <div><span class="reason-icon"><i data-lucide="microscope"></i></span><strong>Hayot izlari</strong><p>Ekstremal muhitdagi mikroblar Marsda nimani qidirishni o'rgatadi</p></div>
+          <div><span class="reason-icon"><i data-lucide="graduation-cap"></i></span><strong data-i18n="intro.r1.t"></strong><p data-i18n="intro.r1.d"></p></div>
+          <div><span class="reason-icon"><i data-lucide="bot"></i></span><strong data-i18n="intro.r2.t"></strong><p data-i18n="intro.r2.d"></p></div>
+          <div><span class="reason-icon"><i data-lucide="microscope"></i></span><strong data-i18n="intro.r3.t"></strong><p data-i18n="intro.r3.d"></p></div>
         </div>
+
+        <section class="why" aria-labelledby="why-title">
+          <h3 id="why-title" data-i18n="intro.why">Nima uchun muhim?</h3>
+          <ol>
+            <li>
+              <span data-i18n="intro.why1"></span>
+              <a href="https://www.nasa.gov/analog-missions/" target="_blank" rel="noopener">NASA: Analog Missions</a>
+            </li>
+            <li>
+              <span data-i18n="intro.why2"></span>
+              <a href="https://pubs.usgs.gov/of/2005/1190/of2005-1190_table1.pdf" target="_blank" rel="noopener">USGS Open-File Report 2005-1190</a>
+            </li>
+            <li>
+              <span data-i18n="intro.why3"></span>
+              <a href="https://www.nasa.gov/universe/atacama-rover-astrobiology-drilling-studies-arads/" target="_blank" rel="noopener">NASA: ARADS</a>
+            </li>
+          </ol>
+        </section>
 
         <div class="stats" id="intro-stats"></div>
+        <p class="stats-note" id="intro-stats-note"></p>
 
         <div class="intro-actions">
-          <button class="btn primary" data-mode="earth"><i data-lucide="globe"></i>Yer xaritasi</button>
-          <button class="btn mars" data-mode="mars"><i data-lucide="orbit"></i>Mars xaritasi</button>
-          <button class="btn moon" data-mode="moon"><i data-lucide="moon"></i>Oy xaritasi</button>
+          <button class="btn primary" data-mode="earth"><i data-lucide="globe"></i><span data-i18n="intro.earth">Yer globusi</span></button>
+          <button class="btn mars" data-mode="mars"><i data-lucide="orbit"></i><span data-i18n="intro.mars">Mars globusi</span></button>
+          <button class="btn moon" data-mode="moon"><i data-lucide="moon"></i><span data-i18n="intro.moon">Oy globusi</span></button>
         </div>
+
+        <figure class="qr">
+          <img src="/qr.svg" width="112" height="112" alt="QR: https://hackathon-rho-flax.vercel.app/" />
+          <figcaption><span data-i18n="intro.qr">Telefonda ochish uchun skanerlang</span><br /><a href="https://hackathon-rho-flax.vercel.app/">hackathon-rho-flax.vercel.app</a></figcaption>
+        </figure>
       </div>
     </div>
 
@@ -41,51 +92,61 @@
         </svg>
         <div>
           <h1>Earth Analogs</h1>
-          <p>Yerdagi Oy va Marsga o'xshash joylar</p>
+          <p data-i18n="app.tagline">Yerdagi Oy va Marsga o'xshash joylar</p>
         </div>
       </div>
 
-      <nav class="modes" id="modes" aria-label="Xarita tanlash">
-        <button data-mode="earth" aria-pressed="true"><span class="mdot earth"></span>Yer</button>
-        <button data-mode="mars" aria-pressed="false"><span class="mdot mars"></span>Mars</button>
-        <button data-mode="moon" aria-pressed="false"><span class="mdot moon"></span>Oy</button>
+      <nav class="modes" id="modes" data-i18n-aria="modes.label" aria-label="Dunyo tanlash">
+        <button data-mode="earth" aria-pressed="true"><span class="mdot earth"></span><span data-i18n="body.earth">Yer</span></button>
+        <button data-mode="mars" aria-pressed="false"><span class="mdot mars"></span><span data-i18n="body.mars">Mars</span></button>
+        <button data-mode="moon" aria-pressed="false"><span class="mdot moon"></span><span data-i18n="body.moon">Oy</span></button>
       </nav>
 
       <div class="top-actions">
-        <button class="icon-btn" id="open-intro" aria-label="Loyiha haqida"><i data-lucide="info"></i></button>
-        <button class="quiz-btn" id="quiz-btn"><i data-lucide="target"></i><span>Qaysi sayyora?</span></button>
+        <button class="icon-btn lang-btn" id="lang-btn" data-i18n-aria="lang.switch" aria-label="Til">EN</button>
+        <button class="icon-btn" id="open-intro" data-i18n-aria="common.about" aria-label="Loyiha haqida"><i data-lucide="info"></i></button>
+        <button class="quiz-btn" id="quiz-btn"><i data-lucide="target"></i><span data-i18n="quiz.title">Qaysi sayyora?</span></button>
       </div>
     </header>
 
     <div id="app">
       <aside id="sidebar">
+        <button class="sheet-handle" id="sheet-handle" data-i18n-aria="sheet.toggle" aria-label="Ro'yxatni ochish yoki yopish" aria-expanded="false"><span></span></button>
         <div class="filters">
           <div class="search-row">
-            <input id="search" type="search" placeholder="Joy yoki davlat qidirish…" />
-            <button class="icon-btn" id="random-btn" aria-label="Tasodifiy joy" title="Tasodifiy joy"><i data-lucide="shuffle"></i></button>
+            <input id="search" type="search" autocomplete="off" data-i18n-aria="search.label" aria-label="Joylarni qidirish" placeholder="Joy, davlat yoki tur qidirish…" />
+            <button class="icon-btn" id="random-btn" data-i18n-aria="common.random" aria-label="Tasodifiy joy"><i data-lucide="shuffle"></i></button>
+          </div>
+          <div class="tools-row">
+            <button class="tool-btn" id="fav-filter" aria-pressed="false"><i data-lucide="star"></i><span data-i18n="fav.title">Sevimlilar</span></button>
+            <button class="tool-btn" id="near-btn"><i data-lucide="locate-fixed"></i><span data-i18n="near.button">Eng yaqin analog</span></button>
+            <button class="tool-btn" id="compare-open"><i data-lucide="scale"></i><span id="compare-label">Taqqoslash (0/2)</span></button>
           </div>
           <div class="chips" id="analog-filter">
-            <button class="chip active" data-value="all">Hammasi</button>
-            <button class="chip mars" data-value="mars">Mars analogi</button>
-            <button class="chip moon" data-value="moon">Oy analogi</button>
+            <button class="chip active" data-value="all" data-i18n="filter.all">Hammasi</button>
+            <button class="chip mars" data-value="mars" data-i18n="analog.mars">Mars analogi</button>
+            <button class="chip moon" data-value="moon" data-i18n="analog.moon">Oy analogi</button>
           </div>
           <div class="chips" id="type-filter"></div>
         </div>
 
-        <p class="count" id="count"></p>
-        <ul id="site-list"></ul>
+        <p class="count" id="count" aria-live="polite"></p>
+        <ul id="site-list" role="listbox" data-i18n-aria="list.label" aria-label="Joylar ro'yxati"></ul>
       </aside>
 
       <main id="maps">
         <div id="globe"></div>
         <div id="flatmap" hidden></div>
-        <button id="back-globe" class="back-globe"><i data-lucide="globe"></i>Globusga qaytish</button>
-        <p class="globe-hint">Globusning istalgan joyini bosing: o'sha joyning xaritasi ochiladi</p>
+        <div class="globe-loading" id="globe-loading" role="status" hidden><span class="spinner"></span><span data-i18n="globe.loading">Yuklanmoqda…</span></div>
+        <button id="back-globe" class="back-globe"><i data-lucide="globe"></i><span data-i18n="globe.back">Globusga qaytish</span></button>
+        <p class="globe-hint" data-i18n="globe.hint">Globusning istalgan joyini bosing: o'sha joyning xaritasi ochiladi</p>
+        <button class="tour-btn" id="tour-btn"><i data-lucide="play"></i><span data-i18n="tour.start">Avtomatik ekskursiya</span></button>
+        <div class="tour-bar" id="tour-bar" hidden aria-live="polite"></div>
         <div class="map-badge" id="map-badge"></div>
       </main>
 
-      <section id="details" class="hidden" aria-live="polite">
-        <button id="close-details" aria-label="Yopish"><i data-lucide="x"></i></button>
+      <section id="details" hidden data-i18n-aria="detail.region" aria-label="Joy tafsilotlari">
+        <button id="close-details" data-i18n-aria="common.close" aria-label="Yopish"><i data-lucide="x"></i></button>
         <div id="details-body"></div>
       </section>
     </div>
@@ -93,6 +154,30 @@
     <div id="quiz" class="modal" role="dialog" aria-modal="true" aria-labelledby="quiz-title" hidden>
       <div class="modal-card" id="quiz-card"></div>
     </div>
+
+    <!-- Umumiy ma'lumot oynasi (o'xshashlik izohi) va taqqoslash oynasi -->
+    <div id="info-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="info-title" hidden>
+      <div class="modal-card" id="info-card"></div>
+    </div>
+    <div id="compare-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="compare-title" hidden>
+      <div class="modal-card wide" id="compare-card"></div>
+    </div>
+
+    <!-- AI yordamchi: /api/chat da kalit bo'lmasa tugma yashirin qoladi -->
+    <button class="chat-btn" id="chat-btn" hidden data-i18n-aria="chat.title" aria-label="AI yordamchi"><i data-lucide="message-circle"></i></button>
+    <section class="chat" id="chat" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden>
+      <header>
+        <strong id="chat-title" data-i18n="chat.title">AI yordamchi</strong>
+        <button class="icon-btn" id="chat-close" data-i18n-aria="common.close" aria-label="Yopish"><i data-lucide="x"></i></button>
+      </header>
+      <div class="chat-log" id="chat-log" aria-live="polite"></div>
+      <form class="chat-form" id="chat-form">
+        <input id="chat-input" maxlength="500" autocomplete="off" data-i18n-ph="chat.placeholder" data-i18n-aria="chat.placeholder" aria-label="Savol" />
+        <button class="btn primary" type="submit"><span data-i18n="chat.send">Yuborish</span></button>
+      </form>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

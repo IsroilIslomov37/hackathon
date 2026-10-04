@@ -25,7 +25,7 @@ function dotTexture() {
   return new THREE.CanvasTexture(c);
 }
 
-export function createGlobe(el, { onPointClick, onGlobeClick, tooltip }) {
+export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading = () => {} }) {
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
   el.appendChild(renderer.domElement);
@@ -238,19 +238,63 @@ export function createGlobe(el, { onPointClick, onGlobeClick, tooltip }) {
     onGlobeClick({ lat, lng });
   }
 
-  // ---------- Tashqi API ----------
+  // ---------- Teksturalar: kesh + faqat oxirgi so'ralgan tekstura qo'llanadi ----------
   const loader = new THREE.TextureLoader();
+  const cache = new Map(); // url -> Promise<Texture>
+  let wanted = null; // oxirgi so'ralgan url (race condition'dan himoya)
+
+  function loadTexture(url) {
+    if (!cache.has(url)) {
+      const p = new Promise((resolve, reject) => {
+        loader.load(
+          url,
+          (tex) => {
+            tex.colorSpace = THREE.SRGBColorSpace;
+            tex.anisotropy = 4;
+            resolve(tex);
+          },
+          undefined,
+          reject,
+        );
+      });
+      // Xato bo'lsa keshdan o'chiramiz, keyingi safar qayta urinish mumkin bo'lsin
+      p.catch(() => cache.delete(url));
+      cache.set(url, p);
+    }
+    return cache.get(url);
+  }
+
+  // ---------- Tashqi API ----------
   return {
-    setTexture(url) {
-      loader.load(url, (tex) => {
-        tex.colorSpace = THREE.SRGBColorSpace;
-        tex.anisotropy = 4;
-        if (material.map) material.map.dispose();
+    // Tekstura to'liq yuklangandan keyingina almashadi. Yuklanayotganda pinlar yashiriladi,
+    // shunda eski sayyora ustida yangi sayyoraning pinlari ko'rinmaydi.
+    async setTexture(url, fallbackColor = 0x223355) {
+      wanted = url;
+      dots.visible = selDot.visible = false;
+      onLoading(true);
+      requestRender();
+      let result = 'ok';
+      try {
+        const tex = await loadTexture(url);
+        if (wanted !== url) return 'stale'; // foydalanuvchi bu orada boshqa tabni tanlagan
         material.map = tex;
         material.color.set(0xffffff);
-        material.needsUpdate = true;
-        requestRender();
-      });
+      } catch {
+        if (wanted !== url) return 'stale';
+        // Fallback: tekstura o'rniga sayyoraga mos oddiy rang
+        material.map = null;
+        material.color.set(fallbackColor);
+        result = 'error';
+      }
+      material.needsUpdate = true;
+      dots.visible = selDot.visible = true;
+      onLoading(false);
+      requestRender();
+      return result;
+    },
+    // Boshqa teksturalarni oldindan yuklab qo'yish (tablar tez almashsin)
+    preload(urls) {
+      urls.forEach((u) => loadTexture(u).catch(() => {}));
     },
     setPoints(list, selectedId) {
       points = list.map((p) => ({ ...p, _v: latLngToVec(p.lat, p.lng, 1.004) }));
@@ -283,10 +327,12 @@ export function createGlobe(el, { onPointClick, onGlobeClick, tooltip }) {
         to: { rotX: Math.max(-1.4, Math.min(1.4, lat * DEG)), rotY: toY, dist },
       };
       requestRender();
+      return new Promise((r) => setTimeout(r, ms));
     },
     zoomTo(dist, ms = 500) {
       tween = { t: 0, dur: ms / 1000, from: { dist: view.dist }, to: { dist } };
       requestRender();
+      return new Promise((r) => setTimeout(r, ms));
     },
     render: requestRender,
   };
