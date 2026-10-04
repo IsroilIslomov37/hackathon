@@ -63,7 +63,7 @@ Har bir joy kartasida quyidagilar bor:
 ### Qo'shimcha imkoniyatlar
 
 - Ikki joyni yonma-yon taqqoslash.
-- 60 soniyalik avtomatik ekskursiya.
+- Avtomatik ekskursiya: globus joylarni geografik tartibda sekin aylanib chiqadi, har bir nuqta yonida surat va qisqa ma'lumot chiqadi.
 - "Qaysi sayyora?" viktorinasi: 4 qiyinlik darajasi, rasmli savollar, eng yaxshi natija saqlanadi.
 - UZ / EN til, sevimlilar, "eng yaqin analog" (geolokatsiya orqali), ulashiladigan havolalar.
 - Oflayn rejim (service worker), klaviatura bilan boshqarish, telefonda pastdan chiqadigan panel.

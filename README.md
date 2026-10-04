@@ -42,7 +42,7 @@ Earth Analogs Explorer har bir Yer analogini uning Mars yoki Oydagi aniq jufti b
 | Qidiruv va filtrlar | Nom, davlat va tur bo'yicha; `'`, `ʻ`, `’`, katta-kichik harf va diakritika farq qilmaydi |
 | Joy kartasi | O'xshashlik foizi va uning izohi, foto slayderi, ko'rsatkichlar jadvali, vaqt chizig'i, mini-xarita, rasm litsenziyalari |
 | Taqqoslash | Ikki joyni yonma-yon: foto, mezonlar, tuproq, missiyalar |
-| Avtomatik ekskursiya | 60 soniyada joylarni aylanib chiqadi, to'xtatish va davom ettirish mumkin |
+| Avtomatik ekskursiya | Joylarni geografik tartibda sekin aylanib chiqadi (har birida ~9 soniya), nuqta yonida surat va ma'lumot kartochkasi chiqadi; pauza, oldingi/keyingi, "Batafsil" |
 | Viktorina | 20 ta matnli va ma'lumotdan yasaladigan rasmli savollar, 4 qiyinlik darajasi, eng yaxshi natija saqlanadi |
 | AI yordamchi | Faqat sayt ma'lumotlari asosida javob beradi (`/api/chat`, kalit faqat serverda) |
 | Ulashish va havolalar | `#/yer`, `#/mars`, `#/oy`, `#/joy/<id>`; "Ulashish" tugmasi |

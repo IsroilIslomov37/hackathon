@@ -27,7 +27,7 @@ Sayt: **https://hackathon-rho-flax.vercel.app/**. Uzun `...-isroil-s-projects.ve
 ## Vaqt qolsa (+30 soniya)
 
 - **Taqqoslash:** ikki joy kartasida **Taqqoslashga qo'shish** tugmasini bosing, masalan Atacama va McMurdo Dry Valleys. Ikkinchisidan keyin taqqoslash oynasi o'zi ochiladi.
-- **Avtomatik ekskursiya:** joy kartasini yoping (✕), keyin globusning o'ng yuqori burchagidagi tugmani bosing. Globus 60 soniyada joylarni aylanib chiqadi, **To'xtatish** bilan to'xtatiladi.
+- **Avtomatik ekskursiya:** joy kartasini yoping (✕), keyin globusning o'ng yuqori burchagidagi tugmani bosing. Globus har bir joyda taxminan 9 soniya to'xtaydi va nuqta yonida surat hamda qisqa ma'lumot chiqaradi. Kartochkadagi tugmalar: oldingi, pauza, keyingi, **Batafsil** va to'xtatish.
 
 ## Hakamlar so'rashi mumkin
 

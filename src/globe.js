@@ -56,7 +56,10 @@ function paintStars(el) {
   });
 }
 
-export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading = () => {} }) {
+export function createGlobe(
+  el,
+  { onPointClick, onGlobeClick, tooltip, onLoading = () => {}, onFrame = () => {}, onInteract = () => {} },
+) {
   paintStars(el);
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
@@ -90,7 +93,24 @@ export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading
   const view = { rotX: 0.3, rotY: 0, dist: 4.4 };
   let vel = { x: 0, y: 0 };
   let tween = null;
+  let tweenDone = null; // joriy animatsiya tugaganda (yoki bekor qilinganda) chaqiriladi
   let points = [];
+
+  function finishTween() {
+    tween = null;
+    if (tweenDone) {
+      const done = tweenDone;
+      tweenDone = null;
+      done();
+    }
+  }
+  // Yangi animatsiya: oldingisi bekor qilinadi, Promise haqiqiy tugashda bajariladi
+  function startTween(tw) {
+    finishTween();
+    tween = tw;
+    requestRender();
+    return new Promise((resolve) => (tweenDone = resolve));
+  }
   let raf = 0;
   let last = 0;
 
@@ -106,7 +126,7 @@ export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading
       tween.t = Math.min(1, tween.t + dt / tween.dur);
       const e = tween.t < 0.5 ? 4 * tween.t ** 3 : 1 - (-2 * tween.t + 2) ** 3 / 2;
       for (const k in tween.to) view[k] = tween.from[k] + (tween.to[k] - tween.from[k]) * e;
-      if (tween.t >= 1) tween = null;
+      if (tween.t >= 1) finishTween();
       active = true;
     } else if (Math.abs(vel.x) + Math.abs(vel.y) > 0.0001 && !dragging) {
       view.rotY += vel.x;
@@ -125,6 +145,7 @@ export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading
     const active = step(dt);
     apply();
     renderer.render(scene, camera);
+    onFrame();
     if (active) requestRender();
     else last = 0;
   }
@@ -167,8 +188,9 @@ export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading
     ptrs.set(e.pointerId, { x: e.clientX, y: e.clientY });
     dragging = true;
     moved = 0;
-    tween = null;
+    finishTween();
     vel = { x: 0, y: 0 };
+    onInteract();
     if (ptrs.size === 2) {
       const [a, b] = [...ptrs.values()];
       pinch = Math.hypot(a.x - b.x, a.y - b.y);
@@ -216,13 +238,14 @@ export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading
     'wheel',
     (e) => {
       e.preventDefault();
+      onInteract();
       zoom(Math.exp(e.deltaY * 0.001));
     },
     { passive: false },
   );
 
   function zoom(f) {
-    tween = null;
+    finishTween();
     view.dist = Math.max(1.35, Math.min(7, view.dist * f));
     requestRender();
   }
@@ -360,18 +383,30 @@ export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading
       fill(selDot, points.filter((p) => p.id === selectedId));
       requestRender();
     },
-    // Berilgan joyni kameraga qaratish
+    // Berilgan joyni kameraga qaratish. Promise animatsiya haqiqatan tugaganda (yoki bekor qilinganda) bajariladi.
     flyTo(lat, lng, dist = view.dist, ms = 1200) {
       let toY = -lng * DEG - Math.PI / 2;
       toY = view.rotY + Math.atan2(Math.sin(toY - view.rotY), Math.cos(toY - view.rotY));
-      tween = {
+      return startTween({
         t: 0,
         dur: ms / 1000,
         from: { rotX: view.rotX, rotY: view.rotY, dist: view.dist },
         to: { rotX: Math.max(-1.4, Math.min(1.4, lat * DEG)), rotY: toY, dist },
+      });
+    },
+    // Nuqtaning globus elementi ichidagi ekran koordinatasi; visible=false bo'lsa nuqta orqa tomonda
+    project(lat, lng) {
+      apply();
+      group.updateMatrixWorld();
+      camera.updateMatrixWorld();
+      const v = latLngToVec(lat, lng, 1.004).applyMatrix4(group.matrixWorld);
+      const facing = v.dot(camera.position.clone().sub(v)) > 0;
+      v.project(camera);
+      return {
+        x: ((v.x + 1) / 2) * el.clientWidth,
+        y: ((1 - v.y) / 2) * el.clientHeight,
+        visible: facing && Math.abs(v.x) <= 1 && Math.abs(v.y) <= 1,
       };
-      requestRender();
-      return new Promise((r) => setTimeout(r, ms));
     },
     // frac: ekran balandligining qancha qismiga yuqoriga surish (0 = markazda)
     setCenterOffset(frac) {
@@ -381,9 +416,7 @@ export function createGlobe(el, { onPointClick, onGlobeClick, tooltip, onLoading
       requestRender();
     },
     zoomTo(dist, ms = 500) {
-      tween = { t: 0, dur: ms / 1000, from: { dist: view.dist }, to: { dist } };
-      requestRender();
-      return new Promise((r) => setTimeout(r, ms));
+      return startTween({ t: 0, dur: ms / 1000, from: { dist: view.dist }, to: { dist } });
     },
     render: requestRender,
   };

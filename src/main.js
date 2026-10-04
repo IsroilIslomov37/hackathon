@@ -29,6 +29,8 @@ import {
   Share2,
   ImageOff,
   CircleHelp,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide';
 import sitesData from './data/sites.json';
 import places from './data/places.json';
@@ -191,6 +193,12 @@ const globe = createGlobe(globeEl, {
   onLoading: (on) => {
     $('#globe-loading').hidden = !on;
   },
+  // Har kadrdan keyin: ekskursiya kartochkasi nuqtaga ergashadi
+  onFrame: () => placeTourCard(),
+  // Foydalanuvchi globusni ushlasa yoki zoom qilsa, ekskursiya pauza qilinadi
+  onInteract: () => {
+    if (tour.on && !tour.paused) pauseTour();
+  },
 });
 
 let preloaded = false;
@@ -278,9 +286,11 @@ $('#back-globe').addEventListener('click', closeFlatMap);
 // globus/xarita markazi ekran balandligining shu ulushiga yuqoriga suriladi.
 const mobileMq = matchMedia('(max-width: 768px)');
 const SHEET_OFFSET = 0.36;
+const TOUR_MOBILE_OFFSET = 0.28; // ekskursiyada nuqta tepada, kartochka uning ostida
+let tourMobileOffset = TOUR_MOBILE_OFFSET; // juda past ekranda ekskursiya paytida oshirilishi mumkin
 const sheetOpen = () => mobileMq.matches && !$('#details').hidden;
 function syncGlobeOffset() {
-  globe.setCenterOffset(sheetOpen() ? SHEET_OFFSET : 0);
+  globe.setCenterOffset(sheetOpen() ? SHEET_OFFSET : tour.on && mobileMq.matches ? tourMobileOffset : 0);
 }
 mobileMq.addEventListener('change', syncGlobeOffset);
 
@@ -993,108 +1003,291 @@ function openCompare() {
 }
 $('#compare-open').addEventListener('click', openCompare);
 
-// ---------- Avtomatik ekskursiya (18): 60 soniyada joylarni aylanib chiqadi ----------
-const tour = { on: false, paused: false, i: 0, list: [], timer: 0, stepMs: 0, started: 0, remaining: 0 };
-const tourBar = $('#tour-bar');
+// ---------- Avtomatik ekskursiya: joylarni sekin aylanib chiqadi, har bir nuqta yonida ma'lumot chiqadi ----------
+const TOUR_FLY_MS = 2200; // keyingi nuqtaga uchish
+const TOUR_DWELL_MS = 7000; // nuqtada to'xtab turish (o'qish vaqti)
+const tour = { on: false, paused: false, arrived: false, i: 0, list: [], timer: 0, started: 0, remaining: TOUR_DWELL_MS, token: 0 };
+const tourCard = $('#tour-card');
+const tourPin = $('#tour-pin');
 
-function renderTourBar() {
-  const x = tour.list[tour.i];
-  if (!x) return;
-  const isSite = !!siteById[x.id] && state.mode === 'earth';
-  const base = isSite ? `${x.id}-earth` : x.photo;
-  tourBar.innerHTML = `
-    ${thumbHtml(base, t('detail.thumbAlt', { name: nameOf(x) }), isSite ? x.analog : x.body, isSite ? x.hasPhoto : true)}
-    <div class="tour-text">
-      <small>${esc(t('tour.progress', { i: tour.i + 1, n: tour.list.length }))}</small>
-      <strong>${esc(nameOf(x))}</strong>
-      <span>${esc(isSite ? tr(x, 'why') : tr(x, 'about'))}</span>
-      <div class="tour-progress"><div style="animation-duration:${tour.stepMs}ms; animation-play-state:${tour.paused ? 'paused' : 'running'}"></div></div>
-    </div>
-    <div class="tour-actions">
-      <button class="icon-btn" data-tour="toggle" aria-label="${esc(tour.paused ? t('tour.resume') : t('tour.pause'))}">${icon(tour.paused ? Play : Pause, 16)}</button>
-      <button class="icon-btn" data-tour="more" aria-label="${esc(t('tour.more'))}">${icon(Info, 16)}</button>
-      <button class="icon-btn" data-tour="stop" aria-label="${esc(t('tour.stop'))}">${icon(Square, 16)}</button>
+// Geografik tartib: har safar eng yaqin keyingi joyga o'tiladi, globus ortiqcha aylanmaydi
+function tourOrder(list) {
+  const rest = list.slice();
+  const out = rest.length ? [rest.shift()] : [];
+  while (rest.length) {
+    const last = out[out.length - 1].coords;
+    let best = 0;
+    rest.forEach((x, i) => {
+      if (haversineKm(last, x.coords) < haversineKm(last, rest[best].coords)) best = i;
+    });
+    out.push(rest.splice(best, 1)[0]);
+  }
+  return out;
+}
+
+function tourCardHtml(x) {
+  const earth = state.mode === 'earth';
+  const name = nameOf(x);
+  let sub;
+  let text;
+  let pairLine = '';
+  let base;
+  let kind;
+  let hasPhoto = true;
+  if (earth) {
+    const sim = similarity(x);
+    const pair = x.place && placeById[x.place];
+    sub = `${tr(x, 'country')} · ${analogLabel(x.analog)}${sim != null ? ` · ${sim}%` : ''}`;
+    text = tr(x, 'why');
+    if (pair) pairLine = `${t('detail.onBody', { body: t(`analog.short.${x.analog}`) })}: ${nameOf(pair)}`;
+    base = `${x.id}-earth`;
+    kind = x.analog;
+    hasPhoto = x.hasPhoto;
+  } else {
+    sub = tr(x, 'mission');
+    text = tr(x, 'about');
+    pairLine = `${t('detail.onEarth')}: ${analogsOf(x).map(nameOf).join(', ')}`;
+    base = x.photo;
+    kind = x.body;
+  }
+  return `
+    <div class="tc-photo ph ph-${kind}">${icon(ImageOff, 20)}${hasPhoto ? picture(base, t('detail.thumbAlt', { name }), { eager: true }) : ''}</div>
+    <div class="tc-body">
+      <small class="tc-step">${esc(t('tour.progress', { i: tour.i + 1, n: tour.list.length }))}</small>
+      <strong>${esc(name)}</strong>
+      <span class="tc-sub">${esc(sub)}</span>
+      <p>${esc(text)}</p>
+      ${pairLine ? `<span class="tc-pair">${icon(EqualApproximately, 14)}<span>${esc(pairLine)}</span></span>` : ''}
+      <div class="tour-progress"><div></div></div>
+      <div class="tour-actions">
+        <button class="icon-btn" data-tour="prev" aria-label="${esc(t('tour.prev'))}" ${tour.i === 0 ? 'disabled' : ''}>${icon(ChevronLeft, 16)}</button>
+        <button class="icon-btn" data-tour="toggle" aria-label="${esc(tour.paused ? t('tour.resume') : t('tour.pause'))}">${icon(tour.paused ? Play : Pause, 16)}</button>
+        <button class="icon-btn" data-tour="next" aria-label="${esc(t('tour.next'))}">${icon(ChevronRight, 16)}</button>
+        <button class="btn tc-more" data-tour="more">${esc(t('tour.more'))}</button>
+        <button class="icon-btn" data-tour="stop" aria-label="${esc(t('tour.stop'))}">${icon(Square, 16)}</button>
+      </div>
     </div>`;
 }
 
-function stepTour() {
-  if (!tour.on) return;
-  if (tour.i >= tour.list.length) {
-    stopTour();
+// Ro'yxatda faol joyni ko'rinadigan qilish. scrollIntoView ishlatilmaydi: u butun sahifani ham surib yuboradi.
+// Telefonda ro'yxat paneli yig'ilgan bo'lsa, hech narsa qilinmaydi.
+function revealActiveInList() {
+  const list = $('#site-list');
+  const li = list.querySelector('.site.active');
+  if (!li || (mobileMq.matches && !$('#sidebar').classList.contains('expanded'))) return;
+  const lr = list.getBoundingClientRect();
+  const ir = li.getBoundingClientRect();
+  if (ir.top < lr.top) list.scrollTop -= lr.top - ir.top + 8;
+  else if (ir.bottom > lr.bottom) list.scrollTop += ir.bottom - lr.bottom + 8;
+}
+
+// Kartochkani nuqta yoniga qo'yish: avval o'ngga, joy bo'lmasa chapga, keyin pastga yoki tepaga
+function placeTourCard() {
+  if (!tour.on || !tour.arrived) return;
+  const x = tour.list[tour.i];
+  if (!x) return;
+  const pt = globe.project(x.coords[0], x.coords[1]);
+  if (!pt.visible) {
+    tourCard.classList.remove('show');
+    tourPin.hidden = true;
     return;
   }
-  const x = tour.list[tour.i];
-  state.selected = x.id;
-  globe.flyTo(x.coords[0], x.coords[1], 3.2, 1200);
-  updateGlobePoints();
-  renderTourBar();
-  tour.started = performance.now();
-  tour.remaining = tour.stepMs;
+  const maps = $('#maps');
+  const W = maps.clientWidth;
+  const mapsH = maps.clientHeight;
+  const mobile = mobileMq.matches;
+  // Telefonda pastdagi yig'ilgan ro'yxat paneli egallagan qismga chiqmaymiz
+  const H = mobile ? Math.min(mapsH, $('#sidebar').getBoundingClientRect().top - maps.getBoundingClientRect().top) : mapsH;
+  tourPin.hidden = false;
+  tourPin.style.transform = `translate(${Math.round(pt.x)}px, ${Math.round(pt.y)}px)`;
+
+  const w = tourCard.offsetWidth;
+  const h = tourCard.offsetHeight;
+  const M = 12;
+  const GAP = 24;
+  let side = 'right';
+  let left = pt.x + GAP;
+  let top = pt.y - h / 2;
+  if (left + w > W - M) {
+    side = 'left';
+    left = pt.x - GAP - w;
+  }
+  if (left < M) {
+    side = 'below';
+    left = pt.x - w / 2;
+    top = pt.y + GAP;
+    if (top + h > H - M) {
+      side = 'above';
+      top = pt.y - GAP - h;
+    }
+  }
+  left = Math.max(M, Math.min(left, W - w - M));
+  top = Math.max(M, Math.min(top, H - h - M));
+
+  const covers = pt.x >= left - 4 && pt.x <= left + w + 4 && pt.y >= top - 4 && pt.y <= top + h + 4;
+  if (covers) {
+    // 1) Kichik ekran: ixcham ko'rinish (suratsiz), keyin qayta joylashtiramiz
+    if (!tourCard.classList.contains('compact')) {
+      tourCard.classList.add('compact');
+      placeTourCard();
+      return;
+    }
+    // 2) Telefonda globusni biroz yuqoriga surib, kartochkaga pastdan joy ochamiz (nuqta tepadan 40 px pastda qoladi)
+    if (mobile) {
+      const shift = Math.min(pt.y + GAP + h - (H - M), pt.y - 40);
+      if (shift > 2) {
+        tourMobileOffset += shift / mapsH;
+        syncGlobeOffset(); // globus qayta chiziladi va bu funksiya keyingi kadrda yana chaqiriladi
+        return;
+      }
+    }
+    // 3) Joy baribir yetmasa: nuqtani yopgandan ko'ra ro'yxat paneli ustiga chiqqan ma'qul
+    side = 'below';
+    top = Math.max(M, Math.min(pt.y + GAP, mapsH - h - M));
+  }
+
+  tourCard.dataset.side = side;
+  tourCard.style.transform = `translate(${Math.round(left)}px, ${Math.round(top)}px)`;
+  tourCard.style.setProperty('--arrow-x', `${Math.round(pt.x - left)}px`);
+  tourCard.style.setProperty('--arrow-y', `${Math.round(pt.y - top)}px`);
+  tourCard.classList.add('show');
+}
+
+// Progress chizig'ini qolgan vaqtga moslash (pauza, til almashishi va qayta chizishda ham to'g'ri)
+function syncTourBar() {
+  const bar = tourCard.querySelector('.tour-progress div');
+  if (!bar) return;
+  const left = tour.paused ? tour.remaining : tour.remaining - (performance.now() - tour.started);
+  bar.style.animationDuration = `${TOUR_DWELL_MS}ms`;
+  bar.style.animationDelay = `${-Math.max(0, TOUR_DWELL_MS - left)}ms`;
+  bar.style.animationPlayState = tour.paused ? 'paused' : 'running';
+}
+
+function updateTourToggle() {
+  const b = tourCard.querySelector('[data-tour="toggle"]');
+  if (!b) return;
+  b.innerHTML = icon(tour.paused ? Play : Pause, 16);
+  b.setAttribute('aria-label', tour.paused ? t('tour.resume') : t('tour.pause'));
+}
+
+function scheduleNextStop() {
   clearTimeout(tour.timer);
-  tour.timer = setTimeout(() => {
-    tour.i++;
-    stepTour();
-  }, tour.stepMs);
-}
-
-function startTour() {
-  stopTour();
-  closeDetails({ silent: true });
-  if (state.view === 'map') closeFlatMap();
-  tour.list = state.mode === 'earth' ? visibleSites() : visiblePlaces();
-  if (!tour.list.length) return;
-  tour.on = true;
-  tour.paused = false;
-  tour.i = 0;
-  tour.stepMs = Math.max(3000, Math.floor(60000 / tour.list.length));
-  tourBar.hidden = false;
-  document.body.classList.add('touring');
-  stepTour();
-}
-
-function pauseTour() {
-  if (!tour.on || tour.paused) return;
-  tour.paused = true;
-  clearTimeout(tour.timer);
-  tour.remaining -= performance.now() - tour.started;
-  tourBar.querySelector('.tour-progress div').style.animationPlayState = 'paused';
-  tourBar.querySelector('[data-tour="toggle"]').innerHTML = icon(Play, 16);
-  tourBar.querySelector('[data-tour="toggle"]').setAttribute('aria-label', t('tour.resume'));
-}
-
-function resumeTour() {
-  if (!tour.on || !tour.paused) return;
-  tour.paused = false;
   tour.started = performance.now();
-  tourBar.querySelector('.tour-progress div').style.animationPlayState = 'running';
-  tourBar.querySelector('[data-tour="toggle"]').innerHTML = icon(Pause, 16);
-  tourBar.querySelector('[data-tour="toggle"]').setAttribute('aria-label', t('tour.pause'));
   tour.timer = setTimeout(() => {
     tour.i++;
     stepTour();
   }, Math.max(0, tour.remaining));
 }
 
+async function stepTour() {
+  if (!tour.on) return;
+  if (tour.i >= tour.list.length) {
+    stopTour();
+    return;
+  }
+  const token = ++tour.token;
+  clearTimeout(tour.timer);
+  tour.arrived = false;
+  tourCard.classList.remove('show');
+  tourPin.hidden = true;
+  const x = tour.list[tour.i];
+  state.selected = x.id;
+  render();
+  revealActiveInList();
+  await globe.flyTo(x.coords[0], x.coords[1], 3.0, TOUR_FLY_MS);
+  // Uchish paytida ekskursiya to'xtatilgan yoki boshqa nuqtaga o'tilgan bo'lsa, davom etmaymiz
+  if (!tour.on || token !== tour.token) return;
+  tourCard.classList.remove('compact');
+  tourCard.innerHTML = tourCardHtml(x);
+  tour.arrived = true;
+  tour.remaining = TOUR_DWELL_MS;
+  tour.started = performance.now();
+  syncTourBar();
+  placeTourCard();
+  if (!tour.paused) scheduleNextStop();
+}
+
+function startTour() {
+  stopTour();
+  closeDetails({ silent: true });
+  if (state.view === 'map') closeFlatMap();
+  const list = state.mode === 'earth' ? visibleSites() : visiblePlaces();
+  if (!list.length) return;
+  Object.assign(tour, { on: true, paused: false, arrived: false, i: 0, list: tourOrder(list) });
+  tourCard.hidden = false;
+  document.body.classList.add('touring');
+  if (mobileMq.matches) setSheet(false);
+  tourMobileOffset = TOUR_MOBILE_OFFSET;
+  syncGlobeOffset();
+  stepTour();
+}
+
+function pauseTour() {
+  if (!tour.on || tour.paused) return;
+  tour.paused = true;
+  if (tour.arrived) {
+    clearTimeout(tour.timer);
+    tour.remaining -= performance.now() - tour.started;
+  }
+  syncTourBar();
+  updateTourToggle();
+}
+
+function resumeTour() {
+  if (!tour.on || !tour.paused) return;
+  tour.paused = false;
+  updateTourToggle();
+  if (tour.arrived) {
+    tour.started = performance.now();
+    syncTourBar();
+    scheduleNextStop();
+  }
+  // Hali uchayotgan bo'lsa, nuqtaga yetib kelgach taymer o'zi ishga tushadi
+}
+
+function goTour(delta) {
+  if (!tour.on) return;
+  tour.i = Math.max(0, tour.i + delta);
+  stepTour();
+}
+
 function stopTour() {
   if (!tour.on) return;
   clearTimeout(tour.timer);
   tour.on = false;
-  tourBar.hidden = true;
+  tour.arrived = false;
+  tour.token++;
+  tourCard.classList.remove('show');
+  tourCard.hidden = true;
+  tourPin.hidden = true;
   document.body.classList.remove('touring');
   state.selected = null;
+  syncGlobeOffset();
   render();
 }
 
+// Til almashganda kartochkani qayta chizish
+function refreshTourCard() {
+  if (!tour.on || !tour.arrived) return;
+  tourCard.innerHTML = tourCardHtml(tour.list[tour.i]);
+  syncTourBar();
+  placeTourCard();
+}
+
 $('#tour-btn').addEventListener('click', startTour);
-tourBar.addEventListener('click', (e) => {
+tourCard.addEventListener('click', (e) => {
   const b = e.target.closest('[data-tour]');
-  if (!b) return;
-  if (b.dataset.tour === 'toggle') (tour.paused ? resumeTour : pauseTour)();
-  else if (b.dataset.tour === 'stop') stopTour();
-  else if (b.dataset.tour === 'more') {
+  if (!b || b.disabled) return;
+  const act = b.dataset.tour;
+  if (act === 'toggle') (tour.paused ? resumeTour : pauseTour)();
+  else if (act === 'prev') goTour(-1);
+  else if (act === 'next') goTour(1);
+  else if (act === 'stop') stopTour();
+  else if (act === 'more') {
     const x = tour.list[tour.i];
+    const earth = state.mode === 'earth';
     stopTour();
-    if (siteById[x.id] && state.mode === 'earth') selectSite(x.id);
+    if (earth) selectSite(x.id);
     else selectPlace(x.id);
   }
 });
@@ -1203,7 +1396,7 @@ $('#lang-btn').addEventListener('click', () => {
     if (siteById[state.selected] && state.mode === 'earth') selectSite(state.selected, { fromRoute: true });
     else if (placeById[state.selected]) selectPlace(state.selected, { fromRoute: true });
   }
-  if (tour.on) renderTourBar();
+  refreshTourCard();
   if (quiz.isOpen()) quiz.open();
 });
 

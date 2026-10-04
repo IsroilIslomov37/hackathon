@@ -16,6 +16,19 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 
+/* Brauzerning o'z elementlari (scrollbar, qidiruvdagi tozalash tugmasi) qorong'i temada chizilsin */
+:root { color-scheme: dark; }
+
+/* Ingichka, temaga mos scrollbar'lar: Chrome 121+, Edge, Firefox standart xususiyatlar orqali */
+* { scrollbar-width: thin; scrollbar-color: #ffffff30 transparent; }
+*:hover { scrollbar-color: #ffffff4d transparent; }
+/* Safari va eski Chrome uchun */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-thumb { background: #ffffff30; border: 3px solid transparent; border-radius: 10px; background-clip: padding-box; }
+::-webkit-scrollbar-thumb:hover { background-color: #ffffff4d; }
+
 html, body {
   margin: 0;
   height: 100%;
@@ -276,33 +289,88 @@ body[data-view='map'] .globe-hint, body.touring .globe-hint { display: none; }
 }
 .leaflet-container { font-family: inherit; }
 
-/* ---------- Avtomatik ekskursiya ---------- */
-.tour-bar {
+/* ---------- Avtomatik ekskursiya: nuqta yonidagi kartochka ---------- */
+/* Nuqta atrofidagi halqa (joyi JS'da transform bilan beriladi) */
+.tour-pin { position: absolute; left: 0; top: 0; z-index: 640; width: 0; height: 0; pointer-events: none; }
+.tour-pin::before,
+.tour-pin::after {
+  content: '';
   position: absolute;
-  left: 50%;
-  bottom: 16px;
-  transform: translateX(-50%);
-  z-index: 650;
-  width: min(560px, calc(100% - 24px));
-  display: grid;
-  grid-template-columns: 72px 1fr auto;
-  gap: 12px;
-  align-items: center;
-  padding: 10px;
-  border-radius: 14px;
-  background: #0b1020f0;
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 30px #0009;
+  left: -14px;
+  top: -14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
-.tour-bar .thumb { width: 72px; height: 56px; }
-.tour-text { min-width: 0; display: grid; gap: 2px; }
-.tour-text small { color: var(--muted); font-size: 11px; }
-.tour-text strong { font-size: 14px; }
-.tour-text span { color: var(--muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.tour-progress { height: 3px; border-radius: 3px; background: #ffffff1a; overflow: hidden; margin-top: 4px; }
-.tour-progress div { height: 100%; width: 0; background: var(--accent); animation: tour-fill linear forwards; }
-@keyframes tour-fill { to { width: 100%; } }
-.tour-actions { display: flex; gap: 6px; }
+.tour-pin::after { animation: tour-ping 1.6s ease-out infinite; }
+@keyframes tour-ping {
+  from { transform: scale(0.6); opacity: 0.9; }
+  to { transform: scale(2.1); opacity: 0; }
+}
+
+.tour-card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 650;
+  width: min(330px, calc(100% - 24px));
+  border-radius: 14px;
+  background: #0d1428;
+  border: 1px solid #ffffff2a;
+  box-shadow: 0 16px 40px #000b;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.tour-card.show { opacity: 1; pointer-events: auto; }
+/* Nuqtaga qaragan strelka: kartochka qaysi tomonda turganiga qarab */
+.tour-card::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #0d1428;
+  border: 1px solid #ffffff2a;
+  transform: rotate(45deg);
+}
+.tour-card[data-side='right']::before { left: -7px; top: clamp(14px, calc(var(--arrow-y) - 6px), calc(100% - 26px)); border-top: 0; border-right: 0; }
+.tour-card[data-side='left']::before { right: -7px; top: clamp(14px, calc(var(--arrow-y) - 6px), calc(100% - 26px)); border-bottom: 0; border-left: 0; }
+.tour-card[data-side='below']::before { top: -7px; left: clamp(14px, calc(var(--arrow-x) - 6px), calc(100% - 26px)); border-bottom: 0; border-right: 0; }
+.tour-card[data-side='above']::before { bottom: -7px; left: clamp(14px, calc(var(--arrow-x) - 6px), calc(100% - 26px)); border-top: 0; border-left: 0; }
+
+.tc-photo { height: 132px; border-radius: 13px 13px 0 0; }
+.tc-body { display: grid; gap: 3px; padding: 10px 12px 12px; }
+.tc-step { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+.tc-body strong { font-size: 16px; line-height: 1.25; }
+.tc-sub { color: var(--muted); font-size: 12px; }
+.tc-body p {
+  margin: 4px 0 0;
+  color: #c8cfe0;
+  font-size: 13px;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.tc-pair { display: flex; align-items: flex-start; gap: 6px; min-width: 0; margin-top: 2px; color: #b8c2ff; font-size: 12px; line-height: 1.4; }
+.tc-pair svg { flex: none; margin-top: 1px; }
+.tour-progress { height: 3px; border-radius: 3px; background: #ffffff1a; overflow: hidden; margin-top: 8px; }
+.tour-progress div { height: 100%; width: 100%; background: var(--accent); transform-origin: left; transform: scaleX(0); animation: tour-fill linear forwards; }
+@keyframes tour-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.tour-actions { display: flex; align-items: center; gap: 6px; margin-top: 8px; }
+.tour-actions .icon-btn:disabled { opacity: 0.35; cursor: default; }
+.tc-more { margin-left: auto; padding: 7px 12px; font-size: 12px; }
+/* Kichik ekranda nuqtani yopmaslik uchun ixcham ko'rinish (JS avtomatik yoqadi) */
+.tour-card.compact .tc-photo { display: none; }
+.tour-card.compact .tc-body p { -webkit-line-clamp: 2; }
+@media (prefers-reduced-motion: reduce) {
+  .tour-pin::after { animation: none; }
+}
 
 /* ---------- Tafsilotlar paneli ---------- */
 #details {
@@ -933,8 +1001,11 @@ body[data-mode='moon'] .modes button[data-mode='moon'] { background: #c9d1e01f; 
   .globe-hint { top: 10px; max-width: calc(100% - 24px); font-size: 11px; }
   .tour-btn { top: auto; bottom: 160px; right: 12px; min-height: 44px; }
   .back-globe { min-height: 44px; }
-  .tour-bar { bottom: 156px; grid-template-columns: 56px 1fr auto; }
-  .tour-bar .thumb { width: 56px; height: 44px; }
+  .tour-card { width: min(340px, calc(100% - 24px)); }
+  .tc-photo { height: 80px; }
+  .tc-body p { -webkit-line-clamp: 2; }
+  .tc-pair span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tc-more { min-height: 44px; }
   .map-badge { bottom: 176px; max-width: calc(100% - 200px); }
   .leaflet-bottom.leaflet-right { bottom: 150px; }
   .chat-btn { bottom: 160px; right: 12px; }
