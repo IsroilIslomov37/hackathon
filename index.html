@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Earth Analogs Explorer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪐</text></svg>" />
+  </head>
+  <body>
+    <div id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+      <div class="intro-card">
+        <p class="eyebrow">NASA Space Apps · Earth Analogs</p>
+        <h2 id="intro-title">Marsga uchishdan oldin <span>Yerda</span> mashq qilamiz</h2>
+        <p class="lead">
+          Astronavtlar va roverlar Oy hamda Marsga borishdan oldin Yerdagi o'xshash joylarda sinovdan o'tadi.
+          Bu joylar <strong>"analog"</strong> deb ataladi.
+        </p>
+
+        <div class="reasons">
+          <div><span>🧑‍🚀</span><strong>Mashg'ulot</strong><p>Apollo ekipajlari kraterlarda geologiyani o'rgangan</p></div>
+          <div><span>🤖</span><strong>Texnika sinovi</strong><p>Roverlar va burg'ular cho'llarda sinaladi</p></div>
+          <div><span>🦠</span><strong>Hayot izlari</strong><p>Ekstremal muhitdagi mikroblar Marsda nimani qidirishni o'rgatadi</p></div>
+        </div>
+
+        <div class="stats" id="intro-stats"></div>
+
+        <div class="intro-actions">
+          <button class="btn primary" data-analog="all">Xaritani ochish</button>
+          <button class="btn mars" data-analog="mars">Mars analoglari</button>
+          <button class="btn moon" data-analog="moon">Oy analoglari</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="app">
+      <aside id="sidebar">
+        <header class="brand">
+          <button id="open-intro" aria-label="Loyiha haqida">?</button>
+          <h1>Earth Analogs</h1>
+          <p>Yerdagi Oy va Marsga o'xshash joylar</p>
+        </header>
+
+        <div class="filters">
+          <div class="chips" id="analog-filter">
+            <button class="chip active" data-value="all">Hammasi</button>
+            <button class="chip mars" data-value="mars">Mars</button>
+            <button class="chip moon" data-value="moon">Oy</button>
+          </div>
+          <div class="chips" id="type-filter"></div>
+          <input id="search" type="search" placeholder="Joy yoki davlat qidirish…" />
+        </div>
+
+        <p class="count" id="count"></p>
+        <ul id="site-list"></ul>
+      </aside>
+
+      <main id="map"></main>
+
+      <section id="details" class="hidden" aria-live="polite">
+        <button id="close-details" aria-label="Yopish">×</button>
+        <div id="details-body"></div>
+      </section>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

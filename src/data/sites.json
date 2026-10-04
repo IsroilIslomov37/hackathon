@@ -1,0 +1,597 @@
+[
+  {
+    "id": "atacama",
+    "name": "Atacama cho'li",
+    "country": "Chili",
+    "coords": [
+      -24.08,
+      -69.92
+    ],
+    "analog": "mars",
+    "type": "desert",
+    "spaceMatch": "Mars tekisliklari (umumiy tuproq)",
+    "params": {
+      "aridity": 10,
+      "cold": 3,
+      "radiation": 9,
+      "regolith": 9,
+      "geology": 7,
+      "isolation": 7
+    },
+    "why": "Yerdagi eng quruq qutbdan tashqari cho'l. Tuprog'ida Marsdagidek perxlorat va nitratlar bor, mikroblar deyarli yashamaydi.",
+    "usedBy": "NASA rover va burg'ulash sinovlari (ARADS loyihasi)",
+    "wiki": "https://en.wikipedia.org/wiki/Atacama_Desert",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA16204",
+        "url": "https://images.nasa.gov/details/PIA16204"
+      },
+      "earth": {
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Valle_de_la_Luna%2C_San_Pedro_de_Atacama%2C_Chile%2C_2016-02-01%2C_DD_152.JPG"
+      }
+    }
+  },
+  {
+    "id": "haughton",
+    "name": "Haughton krateri, Devon oroli",
+    "country": "Kanada",
+    "coords": [
+      75.38,
+      -89.68
+    ],
+    "analog": "mars",
+    "type": "crater",
+    "spaceMatch": "Marsdagi zarba kraterlari",
+    "params": {
+      "aridity": 8,
+      "cold": 9,
+      "radiation": 6,
+      "regolith": 7,
+      "geology": 9,
+      "isolation": 10
+    },
+    "why": "Sovuq qutb cho'lidagi ~23 km lik zarba krateri. Muzlagan tuproq va kanallar Mars relyefiga juda o'xshaydi.",
+    "usedBy": "NASA Haughton-Mars Project (HMP) va Mars Society FMARS stansiyasi",
+    "wiki": "https://en.wikipedia.org/wiki/Haughton_impact_structure",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA17932",
+        "url": "https://images.nasa.gov/details/PIA17932"
+      },
+      "earth": {
+        "text": "Esri World Imagery (sun'iy yo'ldosh)",
+        "url": "https://www.esri.com/"
+      }
+    }
+  },
+  {
+    "id": "rio-tinto",
+    "name": "Rio Tinto daryosi",
+    "country": "Ispaniya",
+    "coords": [
+      37.69,
+      -6.56
+    ],
+    "analog": "mars",
+    "type": "water",
+    "spaceMatch": "Meridiani Planum (Opportunity)",
+    "params": {
+      "aridity": 4,
+      "cold": 2,
+      "radiation": 5,
+      "regolith": 8,
+      "geology": 9,
+      "isolation": 3
+    },
+    "why": "Juda kislotali, temirga boy qizil suv. Bu yerda hosil bo'ladigan jarozit minerali Opportunity roveri Marsda topgan minerallar bilan bir xil.",
+    "usedBy": "NASA MARTE burg'ulash loyihasi, ekstremofil tadqiqotlari",
+    "wiki": "https://en.wikipedia.org/wiki/Rio_Tinto_(river)",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA03279",
+        "url": "https://images.nasa.gov/details/PIA03279"
+      },
+      "earth": {
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Rio_tinto_river_CarolStoker_NASA_Ames_Research_Center.jpg"
+      }
+    }
+  },
+  {
+    "id": "dry-valleys",
+    "name": "McMurdo Dry Valleys",
+    "country": "Antarktida",
+    "coords": [
+      -77.52,
+      161.85
+    ],
+    "analog": "mars",
+    "type": "ice",
+    "spaceMatch": "Marsning qutb va o'rta kengliklari",
+    "params": {
+      "aridity": 10,
+      "cold": 10,
+      "radiation": 8,
+      "regolith": 8,
+      "geology": 8,
+      "isolation": 10
+    },
+    "why": "Yerdagi eng sovuq va quruq vodiylar: millionlab yil yomg'ir yog'magan, shamol va muzlash relyefni Marsdagidek shakllantirgan.",
+    "usedBy": "NASA va NSF astrobiologiya ekspeditsiyalari",
+    "wiki": "https://en.wikipedia.org/wiki/McMurdo_Dry_Valleys",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA10658",
+        "url": "https://images.nasa.gov/details/PIA10658"
+      },
+      "earth": {
+        "text": "Esri World Imagery (sun'iy yo'ldosh)",
+        "url": "https://www.esri.com/"
+      }
+    }
+  },
+  {
+    "id": "mdrs",
+    "name": "Mars Desert Research Station",
+    "country": "AQSh (Yuta)",
+    "coords": [
+      38.406,
+      -110.792
+    ],
+    "analog": "mars",
+    "type": "desert",
+    "spaceMatch": "Marsdagi cho'kindi qatlamlar (Gale krateri)",
+    "params": {
+      "aridity": 8,
+      "cold": 4,
+      "radiation": 5,
+      "regolith": 8,
+      "geology": 9,
+      "isolation": 6
+    },
+    "why": "Qizil-kulrang cho'kindi jinslar va qurigan daryo o'zanlari Curiosity suratlaridagi Gale kraterini eslatadi.",
+    "usedBy": "Mars Society: ekipajlar haftalab 'Marsdagidek' yashab mashq qiladi",
+    "wiki": "https://en.wikipedia.org/wiki/Mars_Desert_Research_Station",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA16105",
+        "url": "https://images.nasa.gov/details/PIA16105"
+      },
+      "earth": {
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Mars_Desert_Research_Station_2020.jpg"
+      }
+    }
+  },
+  {
+    "id": "hi-seas",
+    "name": "Mauna Loa (HI-SEAS)",
+    "country": "AQSh (Gavayi)",
+    "coords": [
+      19.6,
+      -155.48
+    ],
+    "analog": "mars",
+    "type": "volcano",
+    "spaceMatch": "Olympus Mons va Tharsis vulqonlari",
+    "params": {
+      "aridity": 6,
+      "cold": 4,
+      "radiation": 7,
+      "regolith": 9,
+      "geology": 9,
+      "isolation": 8
+    },
+    "why": "Qalqonsimon bazalt vulqon yonbag'ri: o'simliksiz lava maydonlari va bazalt tuproq Mars vulqonlariga o'xshaydi.",
+    "usedBy": "NASA moliyalashtirgan HI-SEAS uzoq muddatli izolyatsiya eksperimentlari",
+    "wiki": "https://en.wikipedia.org/wiki/HI-SEAS",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA10063",
+        "url": "https://images.nasa.gov/details/PIA10063"
+      },
+      "earth": {
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:HI_SEAS_Analogue_suit_test.jpg"
+      }
+    }
+  },
+  {
+    "id": "iceland",
+    "name": "Holuhraun lava maydoni",
+    "country": "Islandiya",
+    "coords": [
+      64.87,
+      -16.83
+    ],
+    "analog": "mars",
+    "type": "volcano",
+    "spaceMatch": "Marsdagi yosh lava oqimlari (Elysium)",
+    "params": {
+      "aridity": 5,
+      "cold": 7,
+      "radiation": 5,
+      "regolith": 8,
+      "geology": 10,
+      "isolation": 7
+    },
+    "why": "Muz va vulqon birga uchraydigan joy. Yangi bazalt lava oqimlari Marsdagi lava tekisliklarining eng yaxshi namunasi.",
+    "usedBy": "NASA SAND-E loyihasi, rover navigatsiya sinovlari",
+    "wiki": "https://en.wikipedia.org/wiki/Holuhraun",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA13534",
+        "url": "https://images.nasa.gov/details/PIA13534"
+      },
+      "earth": {
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:B%C3%A1r%C3%B0arbunga_Volcano%2C_September_4_2014_-_15145875322.jpg"
+      }
+    }
+  },
+  {
+    "id": "svalbard",
+    "name": "Bockfjorden, Svalbard",
+    "country": "Norvegiya",
+    "coords": [
+      79.42,
+      13.33
+    ],
+    "analog": "mars",
+    "type": "ice",
+    "spaceMatch": "Marsdagi karbonatli jinslar (ALH84001 meteoriti)",
+    "params": {
+      "aridity": 6,
+      "cold": 9,
+      "radiation": 6,
+      "regolith": 7,
+      "geology": 9,
+      "isolation": 9
+    },
+    "why": "Muzlik ostidagi vulqonlar va issiq buloqlar Marsdan kelgan meteoritdagi karbonat minerallarini hosil qilgan.",
+    "usedBy": "AMASE ekspeditsiyalari: Curiosity va ExoMars asboblari sinovi",
+    "wiki": "https://en.wikipedia.org/wiki/Svalbard",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA00290",
+        "url": "https://images.nasa.gov/details/PIA00290"
+      },
+      "earth": {
+        "text": "Esri World Imagery (sun'iy yo'ldosh)",
+        "url": "https://www.esri.com/"
+      }
+    }
+  },
+  {
+    "id": "wadi-rum",
+    "name": "Wadi Rum",
+    "country": "Iordaniya",
+    "coords": [
+      29.57,
+      35.42
+    ],
+    "analog": "mars",
+    "type": "desert",
+    "spaceMatch": "Marsning qizil qumli tekisliklari",
+    "params": {
+      "aridity": 9,
+      "cold": 2,
+      "radiation": 7,
+      "regolith": 7,
+      "geology": 7,
+      "isolation": 6
+    },
+    "why": "Temir oksidi bilan qizargan qum va qumtosh qoyalar Mars landshaftiga vizual jihatdan juda yaqin.",
+    "usedBy": "\"The Martian\" filmi, AMADEE-18 analog missiyasi (Avstriya kosmik forumi)",
+    "wiki": "https://en.wikipedia.org/wiki/Wadi_Rum",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA17944",
+        "url": "https://images.nasa.gov/details/PIA17944"
+      },
+      "earth": {
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Mountain_in_Wadi_Rum%2C_Jordan.jpg"
+      }
+    }
+  },
+  {
+    "id": "dallol",
+    "name": "Dallol, Danakil botig'i",
+    "country": "Efiopiya",
+    "coords": [
+      14.24,
+      40.3
+    ],
+    "analog": "mars",
+    "type": "water",
+    "spaceMatch": "Qadimgi Mars gidrotermal tizimlari",
+    "params": {
+      "aridity": 9,
+      "cold": 0,
+      "radiation": 8,
+      "regolith": 7,
+      "geology": 9,
+      "isolation": 8
+    },
+    "why": "Juda kislotali, sho'r va issiq gidrotermal muhit. Hayot chegaralarini o'rganish uchun eng ekstremal joylardan biri.",
+    "usedBy": "Europlanet astrobiologiya tadqiqotlari",
+    "wiki": "https://en.wikipedia.org/wiki/Dallol_(hydrothermal_system)",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA11755",
+        "url": "https://images.nasa.gov/details/PIA11755"
+      },
+      "earth": {
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:ET_Afar_asv2018-01_img48_Dallol.jpg"
+      }
+    }
+  },
+  {
+    "id": "pilbara",
+    "name": "Pilbara",
+    "country": "Avstraliya",
+    "coords": [
+      -21.18,
+      119.15
+    ],
+    "analog": "mars",
+    "type": "desert",
+    "spaceMatch": "Jezero krateri (Perseverance)",
+    "params": {
+      "aridity": 8,
+      "cold": 2,
+      "radiation": 8,
+      "regolith": 7,
+      "geology": 10,
+      "isolation": 8
+    },
+    "why": "3,5 mlrd yillik stromatolitlar: Yerdagi eng qadimgi hayot izlari. Perseverance Marsda aynan shunday izlarni qidiradi.",
+    "usedBy": "NASA va Mars 2020 jamoasi geologlari mashg'ulotlari",
+    "wiki": "https://en.wikipedia.org/wiki/Pilbara",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA23386",
+        "url": "https://images.nasa.gov/details/PIA23386"
+      },
+      "earth": {
+        "text": "Esri World Imagery (sun'iy yo'ldosh)",
+        "url": "https://www.esri.com/"
+      }
+    }
+  },
+  {
+    "id": "meteor-crater",
+    "name": "Meteor Crater",
+    "country": "AQSh (Arizona)",
+    "coords": [
+      35.027,
+      -111.022
+    ],
+    "analog": "moon",
+    "type": "crater",
+    "spaceMatch": "Oydagi yosh oddiy kraterlar",
+    "params": {
+      "aridity": 8,
+      "cold": 3,
+      "radiation": 6,
+      "regolith": 8,
+      "geology": 10,
+      "isolation": 5
+    },
+    "why": "Yerdagi eng yaxshi saqlangan zarba krateri (~1,2 km). Uning tuzilishi Oydagi kichik kraterlar bilan deyarli bir xil.",
+    "usedBy": "Apollo astronavtlarining geologiya mashg'ulotlari",
+    "wiki": "https://en.wikipedia.org/wiki/Meteor_Crater",
+    "credits": {
+      "space": {
+        "text": "NASA · as16-116-18649",
+        "url": "https://images.nasa.gov/details/as16-116-18649"
+      },
+      "earth": {
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Meteor_Crater_-_Arizona.jpg"
+      }
+    }
+  },
+  {
+    "id": "cinder-lake",
+    "name": "Cinder Lake Crater Field",
+    "country": "AQSh (Arizona)",
+    "coords": [
+      35.3,
+      -111.47
+    ],
+    "analog": "moon",
+    "type": "crater",
+    "spaceMatch": "Apollo 11 qo'nish joyi (Tinchlik dengizi)",
+    "params": {
+      "aridity": 7,
+      "cold": 4,
+      "radiation": 6,
+      "regolith": 9,
+      "geology": 8,
+      "isolation": 4
+    },
+    "why": "Qora vulqon kulida portlatish yo'li bilan sun'iy kraterlar yasalgan: Apollo 11 qo'nish joyining aniq nusxasi.",
+    "usedBy": "USGS va NASA: Apollo ekipajlari va lunar rover sinovlari",
+    "wiki": "https://en.wikipedia.org/wiki/Cinder_Lake_Crater_Field",
+    "credits": {
+      "space": {
+        "text": "NASA · as11-40-5951",
+        "url": "https://images.nasa.gov/details/as11-40-5951"
+      },
+      "earth": {
+        "text": "Esri World Imagery (sun'iy yo'ldosh)",
+        "url": "https://www.esri.com/"
+      }
+    }
+  },
+  {
+    "id": "ries",
+    "name": "Nördlinger Ries",
+    "country": "Germaniya",
+    "coords": [
+      48.85,
+      10.49
+    ],
+    "analog": "moon",
+    "type": "crater",
+    "spaceMatch": "Oydagi yirik zarba havzalari",
+    "params": {
+      "aridity": 2,
+      "cold": 4,
+      "radiation": 3,
+      "regolith": 7,
+      "geology": 10,
+      "isolation": 2
+    },
+    "why": "~24 km lik qadimiy krater. Zarba natijasida hosil bo'lgan suevit jinsi Oy namunalaridagi brekchiyalarga o'xshaydi.",
+    "usedBy": "Apollo 14 ekipaji mashg'uloti (1970)",
+    "wiki": "https://en.wikipedia.org/wiki/N%C3%B6rdlinger_Ries",
+    "credits": {
+      "space": {
+        "text": "NASA · as14-64-9099",
+        "url": "https://images.nasa.gov/details/as14-64-9099"
+      },
+      "earth": {
+        "text": "Esri World Imagery (sun'iy yo'ldosh)",
+        "url": "https://www.esri.com/"
+      }
+    }
+  },
+  {
+    "id": "sudbury",
+    "name": "Sudbury havzasi",
+    "country": "Kanada",
+    "coords": [
+      46.6,
+      -81.18
+    ],
+    "analog": "moon",
+    "type": "crater",
+    "spaceMatch": "Oydagi ko'p halqali havzalar",
+    "params": {
+      "aridity": 2,
+      "cold": 6,
+      "radiation": 3,
+      "regolith": 6,
+      "geology": 10,
+      "isolation": 3
+    },
+    "why": "Yerdagi eng katta va eng qadimgi zarba tuzilmalaridan biri. Shatter cone (zarba konuslari) Oy geologiyasini o'rganishda ishlatilgan.",
+    "usedBy": "Apollo 16 va 17 astronavtlarining dala mashg'ulotlari",
+    "wiki": "https://en.wikipedia.org/wiki/Sudbury_Basin",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA13225",
+        "url": "https://images.nasa.gov/details/PIA13225"
+      },
+      "earth": {
+        "text": "Esri World Imagery (sun'iy yo'ldosh)",
+        "url": "https://www.esri.com/"
+      }
+    }
+  },
+  {
+    "id": "lanzarote",
+    "name": "Lanzarote (Timanfaya)",
+    "country": "Ispaniya",
+    "coords": [
+      29,
+      -13.75
+    ],
+    "analog": "moon",
+    "type": "cave",
+    "spaceMatch": "Oydagi lava tunnellari (Marius Hills)",
+    "params": {
+      "aridity": 8,
+      "cold": 2,
+      "radiation": 6,
+      "regolith": 8,
+      "geology": 9,
+      "isolation": 4
+    },
+    "why": "Bazalt lava maydonlari va uzun lava tunnellari: kelajakda Oydagi bazalar quriladigan g'orlarga o'xshash.",
+    "usedBy": "ESA PANGAEA va CAVES astronavtlar mashg'ulotlari",
+    "wiki": "https://en.wikipedia.org/wiki/Timanfaya_National_Park",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA12954",
+        "url": "https://images.nasa.gov/details/PIA12954"
+      },
+      "earth": {
+        "text": "Esri World Imagery (sun'iy yo'ldosh)",
+        "url": "https://www.esri.com/"
+      }
+    }
+  },
+  {
+    "id": "craters-of-the-moon",
+    "name": "Craters of the Moon",
+    "country": "AQSh (Aydaho)",
+    "coords": [
+      43.42,
+      -113.52
+    ],
+    "analog": "moon",
+    "type": "volcano",
+    "spaceMatch": "Oy dengizlari (bazalt tekisliklar)",
+    "params": {
+      "aridity": 7,
+      "cold": 5,
+      "radiation": 6,
+      "regolith": 7,
+      "geology": 9,
+      "isolation": 5
+    },
+    "why": "Keng bazalt lava maydonlari, vulqon konuslari va lava g'orlari. Nomi ham Oyga o'xshashligidan olingan.",
+    "usedBy": "Apollo 14 astronavtlari mashg'uloti, NASA FINESSE loyihasi",
+    "wiki": "https://en.wikipedia.org/wiki/Craters_of_the_Moon_National_Monument_and_Preserve",
+    "credits": {
+      "space": {
+        "text": "NASA · as15-89-12100",
+        "url": "https://images.nasa.gov/details/as15-89-12100"
+      },
+      "earth": {
+        "text": "Esri World Imagery (sun'iy yo'ldosh)",
+        "url": "https://www.esri.com/"
+      }
+    }
+  },
+  {
+    "id": "aralkum",
+    "name": "Orolqum (Orol dengizi tubi)",
+    "country": "O'zbekiston / Qozog'iston",
+    "coords": [
+      45,
+      59.5
+    ],
+    "analog": "mars",
+    "type": "desert",
+    "proposed": true,
+    "spaceMatch": "Marsdagi qurigan ko'llar va tuz konlari",
+    "params": {
+      "aridity": 8,
+      "cold": 5,
+      "radiation": 6,
+      "regolith": 7,
+      "geology": 6,
+      "isolation": 7
+    },
+    "why": "Taklif: qurigan sho'r ko'l tubi. Marsdagi qadimgi ko'llarning qurishi va tuz qatlamlari hosil bo'lishini o'rganish uchun model bo'lishi mumkin.",
+    "usedBy": "Rasmiy analog emas, jamoamiz taklifi",
+    "wiki": "https://en.wikipedia.org/wiki/Aralkum_Desert",
+    "credits": {
+      "space": {
+        "text": "NASA · PIA10247",
+        "url": "https://images.nasa.gov/details/PIA10247"
+      },
+      "earth": {
+        "text": "Esri World Imagery (sun'iy yo'ldosh)",
+        "url": "https://www.esri.com/"
+      }
+    }
+  }
+]
