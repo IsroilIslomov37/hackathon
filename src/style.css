@@ -121,9 +121,13 @@ html, body {
   background: none;
   border: 0;
   color: var(--muted);
-  font-size: 26px;
+  padding: 4px;
+  display: grid;
+  place-items: center;
   cursor: pointer;
 }
+#close-details:hover { color: var(--text); }
+#close-details svg { width: 22px; height: 22px; }
 
 .badges { display: flex; gap: 6px; flex-wrap: wrap; }
 .badge {
@@ -168,6 +172,8 @@ html, body {
   height: 100%;
   object-fit: cover;
 }
+/* NASA suratlarining qora chetlarini yashirish */
+.compare img:not(.earth) { transform: scale(1.06); }
 .compare img.earth { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
 .compare .handle {
   position: absolute;
@@ -180,8 +186,7 @@ html, body {
   box-shadow: 0 0 8px #0008;
   pointer-events: none;
 }
-.compare .handle::after {
-  content: '⇆';
+.compare .handle span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -193,7 +198,6 @@ html, body {
   color: #111;
   display: grid;
   place-items: center;
-  font-size: 15px;
 }
 .compare input {
   position: absolute;
@@ -234,11 +238,11 @@ html, body {
   font-size: 13px;
 }
 .match span { color: var(--muted); }
-.match .arrow { grid-column: 1 / -1; text-align: center; font-size: 18px; color: var(--accent); }
+.match .arrow { grid-column: 1 / -1; display: grid; place-items: center; color: var(--accent); }
 
 .chart-wrap { max-width: 300px; margin: 0 auto; }
 
-.more { display: inline-block; margin-top: 18px; color: var(--accent); font-size: 14px; }
+.more { display: inline-flex; align-items: center; gap: 4px; margin-top: 18px; color: var(--accent); font-size: 14px; }
 
 /* ---------- Intro ---------- */
 #intro {
@@ -277,7 +281,16 @@ html, body {
   padding: 16px;
   text-align: left;
 }
-.reasons span { font-size: 24px; }
+.reason-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #7c8cff22;
+  color: var(--accent);
+}
+.reason-icon svg { width: 22px; height: 22px; }
 .reasons strong { display: block; margin: 6px 0 4px; }
 .reasons p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.4; }
 
@@ -287,6 +300,9 @@ html, body {
 
 .intro-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
 .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   border: 1px solid var(--border);
   background: var(--panel-2);
   color: var(--text);
@@ -312,7 +328,12 @@ html, body {
   background: var(--panel-2);
   color: var(--muted);
   cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0;
 }
+#open-intro svg { width: 16px; height: 16px; }
+.btn svg { width: 16px; height: 16px; }
 #open-intro:hover { color: var(--text); }
 
 /* ---------- Mobile ---------- */

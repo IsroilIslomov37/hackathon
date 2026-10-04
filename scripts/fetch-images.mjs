@@ -4,9 +4,9 @@ const UA = { 'User-Agent': 'earth-analogs-hackathon/0.1 (education)' };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const space = {
-  atacama: 'PIA16204', haughton: 'PIA17932', 'rio-tinto': 'PIA03279', 'dry-valleys': 'PIA10658', mdrs: 'PIA16105',
-  'hi-seas': 'PIA10063', iceland: 'PIA13534', svalbard: 'PIA00290', 'wadi-rum': 'PIA17944', dallol: 'PIA11755',
-  pilbara: 'PIA23386', 'meteor-crater': 'as16-116-18649', 'cinder-lake': 'as11-40-5951', ries: 'as14-64-9099',
+  atacama: 'PIA16204', haughton: 'PIA17932', 'rio-tinto': 'PIA03279', 'dry-valleys': 'PIA10792', mdrs: 'PIA16105',
+  'hi-seas': 'PIA02982', iceland: 'PIA05805', svalbard: 'PIA00290', 'wadi-rum': 'PIA17944', dallol: 'PIA09491',
+  pilbara: 'PIA25022', 'meteor-crater': 'as12-50-07431', 'cinder-lake': 'as11-40-5951', ries: 'as14-64-9099',
   sudbury: 'PIA13225', lanzarote: 'PIA12954', 'craters-of-the-moon': 'as15-89-12100', aralkum: 'PIA10247',
 };
 const wiki = {
@@ -20,6 +20,8 @@ const wiki = {
   'meteor-crater': 'commons/f/fd/Meteor_Crater_-_Arizona.jpg',
   lanzarote: 'commons/4/41/Timanfaya_National_Park_landscape.jpg',
   'craters-of-the-moon': 'commons/a/a3/CratersDrone1.jpg',
+  ries: 'commons/9/99/N%C3%B6rdlinger_Ries_Relief_Map%2C_SRTM-1.jpg',
+  sudbury: 'commons/3/37/Sudbury_Wanapitei_WorldWind.jpg',
 };
 // Sun'iy yo'ldosh kadri: markaz va kenglik (gradus)
 const sat = {

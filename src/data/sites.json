@@ -122,8 +122,8 @@
     "wiki": "https://en.wikipedia.org/wiki/McMurdo_Dry_Valleys",
     "credits": {
       "space": {
-        "text": "NASA · PIA10658",
-        "url": "https://images.nasa.gov/details/PIA10658"
+        "text": "NASA · PIA10792",
+        "url": "https://images.nasa.gov/details/PIA10792"
       },
       "earth": {
         "text": "Esri World Imagery (sun'iy yo'ldosh)",
@@ -188,8 +188,8 @@
     "wiki": "https://en.wikipedia.org/wiki/HI-SEAS",
     "credits": {
       "space": {
-        "text": "NASA · PIA10063",
-        "url": "https://images.nasa.gov/details/PIA10063"
+        "text": "NASA · PIA02982",
+        "url": "https://images.nasa.gov/details/PIA02982"
       },
       "earth": {
         "text": "Wikimedia Commons",
@@ -207,7 +207,7 @@
     ],
     "analog": "mars",
     "type": "volcano",
-    "spaceMatch": "Marsdagi yosh lava oqimlari (Elysium)",
+    "spaceMatch": "Marsdagi lava oqimlari (Tharsis)",
     "params": {
       "aridity": 5,
       "cold": 7,
@@ -221,8 +221,8 @@
     "wiki": "https://en.wikipedia.org/wiki/Holuhraun",
     "credits": {
       "space": {
-        "text": "NASA · PIA13534",
-        "url": "https://images.nasa.gov/details/PIA13534"
+        "text": "NASA · PIA05805",
+        "url": "https://images.nasa.gov/details/PIA05805"
       },
       "earth": {
         "text": "Wikimedia Commons",
@@ -306,7 +306,7 @@
     ],
     "analog": "mars",
     "type": "water",
-    "spaceMatch": "Qadimgi Mars gidrotermal tizimlari",
+    "spaceMatch": "Spirit topgan kremniyli tuproq (Gusev krateri)",
     "params": {
       "aridity": 9,
       "cold": 0,
@@ -320,8 +320,8 @@
     "wiki": "https://en.wikipedia.org/wiki/Dallol_(hydrothermal_system)",
     "credits": {
       "space": {
-        "text": "NASA · PIA11755",
-        "url": "https://images.nasa.gov/details/PIA11755"
+        "text": "NASA · PIA09491",
+        "url": "https://images.nasa.gov/details/PIA09491"
       },
       "earth": {
         "text": "Wikimedia Commons",
@@ -339,7 +339,7 @@
     ],
     "analog": "mars",
     "type": "desert",
-    "spaceMatch": "Jezero krateri (Perseverance)",
+    "spaceMatch": "Jezero krateri deltasi (Perseverance)",
     "params": {
       "aridity": 8,
       "cold": 2,
@@ -353,8 +353,8 @@
     "wiki": "https://en.wikipedia.org/wiki/Pilbara",
     "credits": {
       "space": {
-        "text": "NASA · PIA23386",
-        "url": "https://images.nasa.gov/details/PIA23386"
+        "text": "NASA · PIA25022",
+        "url": "https://images.nasa.gov/details/PIA25022"
       },
       "earth": {
         "text": "Esri World Imagery (sun'iy yo'ldosh)",
@@ -372,7 +372,7 @@
     ],
     "analog": "moon",
     "type": "crater",
-    "spaceMatch": "Oydagi yosh oddiy kraterlar",
+    "spaceMatch": "Oy kraterlari (Apollo 12 orbitadan)",
     "params": {
       "aridity": 8,
       "cold": 3,
@@ -386,8 +386,8 @@
     "wiki": "https://en.wikipedia.org/wiki/Meteor_Crater",
     "credits": {
       "space": {
-        "text": "NASA · as16-116-18649",
-        "url": "https://images.nasa.gov/details/as16-116-18649"
+        "text": "NASA · as12-50-07431",
+        "url": "https://images.nasa.gov/details/as12-50-07431"
       },
       "earth": {
         "text": "Wikimedia Commons",
@@ -456,8 +456,8 @@
         "url": "https://images.nasa.gov/details/as14-64-9099"
       },
       "earth": {
-        "text": "Esri World Imagery (sun'iy yo'ldosh)",
-        "url": "https://www.esri.com/"
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:N%C3%B6rdlinger_Ries_Relief_Map%2C_SRTM-1.jpg"
       }
     }
   },
@@ -489,8 +489,8 @@
         "url": "https://images.nasa.gov/details/PIA13225"
       },
       "earth": {
-        "text": "Esri World Imagery (sun'iy yo'ldosh)",
-        "url": "https://www.esri.com/"
+        "text": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Sudbury_Wanapitei_WorldWind.jpg"
       }
     }
   },

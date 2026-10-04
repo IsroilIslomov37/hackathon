@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Earth Analogs Explorer</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪐</text></svg>" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='26' fill='%23ff6b4a'/><ellipse cx='50' cy='50' rx='46' ry='14' fill='none' stroke='%23c9d1e0' stroke-width='6' transform='rotate(-20 50 50)'/></svg>" />
   </head>
   <body>
     <div id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
@@ -17,17 +17,17 @@
         </p>
 
         <div class="reasons">
-          <div><span>🧑‍🚀</span><strong>Mashg'ulot</strong><p>Apollo ekipajlari kraterlarda geologiyani o'rgangan</p></div>
-          <div><span>🤖</span><strong>Texnika sinovi</strong><p>Roverlar va burg'ular cho'llarda sinaladi</p></div>
-          <div><span>🦠</span><strong>Hayot izlari</strong><p>Ekstremal muhitdagi mikroblar Marsda nimani qidirishni o'rgatadi</p></div>
+          <div><span class="reason-icon"><i data-lucide="graduation-cap"></i></span><strong>Mashg'ulot</strong><p>Apollo ekipajlari kraterlarda geologiyani o'rgangan</p></div>
+          <div><span class="reason-icon"><i data-lucide="bot"></i></span><strong>Texnika sinovi</strong><p>Roverlar va burg'ular cho'llarda sinaladi</p></div>
+          <div><span class="reason-icon"><i data-lucide="microscope"></i></span><strong>Hayot izlari</strong><p>Ekstremal muhitdagi mikroblar Marsda nimani qidirishni o'rgatadi</p></div>
         </div>
 
         <div class="stats" id="intro-stats"></div>
 
         <div class="intro-actions">
-          <button class="btn primary" data-analog="all">Xaritani ochish</button>
-          <button class="btn mars" data-analog="mars">Mars analoglari</button>
-          <button class="btn moon" data-analog="moon">Oy analoglari</button>
+          <button class="btn primary" data-analog="all"><i data-lucide="globe"></i>Xaritani ochish</button>
+          <button class="btn mars" data-analog="mars"><i data-lucide="orbit"></i>Mars analoglari</button>
+          <button class="btn moon" data-analog="moon"><i data-lucide="moon"></i>Oy analoglari</button>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
     <div id="app">
       <aside id="sidebar">
         <header class="brand">
-          <button id="open-intro" aria-label="Loyiha haqida">?</button>
+          <button id="open-intro" aria-label="Loyiha haqida"><i data-lucide="info"></i></button>
           <h1>Earth Analogs</h1>
           <p>Yerdagi Oy va Marsga o'xshash joylar</p>
         </header>
@@ -57,7 +57,7 @@
       <main id="map"></main>
 
       <section id="details" class="hidden" aria-live="polite">
-        <button id="close-details" aria-label="Yopish">×</button>
+        <button id="close-details" aria-label="Yopish"><i data-lucide="x"></i></button>
         <div id="details-body"></div>
       </section>
     </div>

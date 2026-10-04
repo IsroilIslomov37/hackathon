@@ -1,6 +1,21 @@
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Chart, RadarController, RadialLinearScale, PointElement, LineElement, Filler, Tooltip } from 'chart.js';
+import {
+  createIcons,
+  createElement,
+  GraduationCap,
+  Bot,
+  Microscope,
+  Info,
+  X,
+  Globe,
+  Orbit,
+  Moon,
+  MoveHorizontal,
+  EqualApproximately,
+  ExternalLink,
+} from 'lucide';
 import sites from './data/sites.json';
 import './style.css';
 
@@ -34,6 +49,11 @@ const similarity = (s) => {
   const v = Object.values(s.params);
   return Math.round((v.reduce((a, b) => a + b, 0) / v.length) * 10);
 };
+
+// Lucide ikonkasi → SVG matn (innerHTML ichida ishlatish uchun)
+const icon = (node, size = 16) => createElement(node, { width: size, height: size, 'aria-hidden': 'true' }).outerHTML;
+
+createIcons({ icons: { GraduationCap, Bot, Microscope, Info, X, Globe, Orbit, Moon } });
 
 const esc = (str) =>
   String(str).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -81,7 +101,15 @@ function bindChips(el, key) {
     el.querySelectorAll('.chip').forEach((c) => c.classList.toggle('active', c === btn));
     state[key] = btn.dataset.value;
     render();
+    fitVisible();
   });
+}
+
+// Filtrdan keyin xaritani topilgan joylarga moslash
+function fitVisible() {
+  const list = visible();
+  if (!list.length) return;
+  map.flyToBounds(L.latLngBounds(list.map((s) => s.coords)), { padding: [60, 60], maxZoom: 5, duration: 1 });
 }
 bindChips(document.getElementById('analog-filter'), 'analog');
 bindChips(typeFilter, 'type');
@@ -159,7 +187,7 @@ function select(id) {
       <img class="earth" src="/img/${s.id}-earth.jpg" alt="${esc(s.name)}" />
       <span class="tag left">Yer</span>
       <span class="tag right" style="--c:${a.color}">${a.label}</span>
-      <div class="handle"></div>
+      <div class="handle"><span>${icon(MoveHorizontal, 16)}</span></div>
       <input type="range" min="0" max="100" value="50" aria-label="Yer va ${a.label} suratlarini solishtirish" />
     </div>
     <p class="credits">
@@ -169,7 +197,7 @@ function select(id) {
 
     <div class="match">
       <span>Yerda</span><strong>${esc(s.name)}</strong>
-      <span class="arrow">≈</span>
+      <span class="arrow">${icon(EqualApproximately, 18)}</span>
       <span>${a.label}da</span><strong>${esc(s.spaceMatch)}</strong>
     </div>
 
@@ -185,7 +213,7 @@ function select(id) {
     <h3>Parametrlar</h3>
     <div class="chart-wrap"><canvas id="radar"></canvas></div>
 
-    <a class="more" href="${s.wiki}" target="_blank" rel="noopener">Batafsil (Wikipedia) ↗</a>
+    <a class="more" href="${s.wiki}" target="_blank" rel="noopener">Batafsil (Wikipedia) ${icon(ExternalLink, 14)}</a>
   `;
   details.classList.remove('hidden');
   details.scrollTop = 0;
